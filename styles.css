@@ -1,49 +1,135 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* styles.css */
+
+:root {
+  --primary: #0055a4;
+  --accent: #ffd700;
+  --light: #f9f9f9;
+  --dark: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #333;
 }
 
-header {
-  background: #0055A4;
-  color: #fff;
-  padding: 80px 20px;
-  text-align: center;
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--dark);
+  line-height: 1.6;
 }
 
-header .cta {
-  display: inline-block;
-  margin-top: 20px;
-  background: #FFD700;
-  color: #333;
-  padding: 12px 24px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section {
-  padding: 60px 20px;
-  max-width: 800px;
+.container {
+  width: 90%;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-h2 {
-  color: #0055A4;
+.nav {
+  background: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.cta {
-  background: #0055A4;
+.nav .logo {
+  font-family: 'Lora', serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav .menu a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
   color: #fff;
-  padding: 12px 24px;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  padding: 12px 28px;
+  font-weight: 600;
   text-decoration: none;
   border-radius: 4px;
 }
 
+.section {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.section.alt {
+  background: var(--light);
+}
+
+h2 {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: disc inside;
+  margin-left: 20px;
+}
+
 blockquote {
   font-style: italic;
-  border-left: 4px solid #0055A4;
-  margin: 20px 0;
+  border-left: 4px solid var(--primary);
   padding-left: 20px;
+}
+
+.footer {
+  text-align: center;
+  padding: 40px 0;
+  background: var(--dark);
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nav .menu {
+    display: none;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .container {
+    width: 95%;
+  }
 }
