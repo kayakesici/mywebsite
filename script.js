@@ -49,6 +49,6 @@ function smoothScroll(targetSelector, duration) {
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     e.preventDefault()
-    smoothScroll(a.getAttribute('href'), 400) // <-- 400ms for a faster scroll
+    smoothScroll(a.getAttribute('href'), 200) // <-- 200ms for a faster scroll
   })
 })
