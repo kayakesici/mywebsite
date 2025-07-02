@@ -248,7 +248,3 @@ body {
     display: block;
   }
 }
-/* at the very top of styles.css */
-html {
-  scroll-behavior: smooth;
-}
