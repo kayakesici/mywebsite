@@ -89,14 +89,28 @@ body {
 .section {
   background-color: var(--light);
 }
+
+/* Make hero full-width and use gutter space */
 .hero {
-  height: 80vh;
+  width: 100%;
+  padding: 4rem 0;
   display: flex;
+  justify-content: center;
   align-items: center;
   text-align: center;
 }
+
+/* Override the usual container sizing inside the hero */
+.hero .container {
+  width: 100%;      /* fill the viewport */
+  max-width: none;  /* no max constraint here */
+  padding: 0 5%;    /* side padding so text doesn’t touch edges */
+}
+
+/* Now allow the hero-content area to expand */
 .hero-content {
-  max-width: 800px;
+  max-width: 1200px; /* wider than before */
+  width: 100%;
   margin: 0 auto;
 }
 .hero h1 {
