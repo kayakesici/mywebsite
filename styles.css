@@ -1,7 +1,7 @@
 :root {
   --primary: #212121;        /* main text */
-  --accent: #0055A4;         /* your original deep blue */
-  --light-bg: #FAFAFA;       /* alternate section background */
+  --accent: #0055A4;         /* deep blue accent */
+  --light-bg: #FAFAFA;       /* alternating section background */
   --dark-bg: #222;           /* footer background */
   --font-sans: 'Public Sans', sans-serif;
 }
@@ -175,13 +175,54 @@ h2 {
   color: #555;
 }
 
-/* STRUGGLES */
-.struggle-list {
-  list-style: disc inside;
-  max-width: 600px;
-  margin: 0 auto;
+/* COMMON SELLING STRUGGLES CARDS */
+.subheading {
+  text-align: center;
+  color: #555;
+  margin: 0.5rem 0 2rem;
+  font-size: 1rem;
+}
+.struggles-cards {
   display: grid;
-  gap: .75rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+  gap: 1rem;
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+.card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  flex-shrink: 0;
+}
+.card h3 {
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary);
+}
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #444;
+  flex-grow: 1;
 }
 
 /* WHY US */
