@@ -19,8 +19,8 @@ body {
   line-height: 1.6;
 }
 .container {
-  width: 90%;
-  max-width: 1100px;
+  width: 95%;
+  max-width: 1400px;
   margin: 0 auto;
 }
 
@@ -47,7 +47,6 @@ body {
 .nav-right {
   display: flex;
   align-items: center;
-  margin-left: auto;
 }
 .nav-links {
   list-style: none;
@@ -69,9 +68,9 @@ body {
   background: var(--primary);
   color: #fff;
   padding: 0.6rem 1.5rem;
-  font-size: 1.1rem;
   text-decoration: none;
   border-radius: 4px;
+  font-size: 1.1rem;
   margin-left: 2rem;
 }
 .nav-toggle {
@@ -85,9 +84,12 @@ body {
   .nav-toggle { display: block; }
 }
 
-/* HERO (white background to match team) */
+/* HERO & ALL SECTIONS – light grey background */
+.hero,
+.section {
+  background-color: var(--light);
+}
 .hero {
-  background-color: #fff;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -96,7 +98,6 @@ body {
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
-  color: var(--dark);
 }
 .hero h1 {
   font-family: 'Lora', serif;
@@ -114,28 +115,34 @@ body {
   gap: 1rem;
   justify-content: center;
 }
+
+/* Button styles */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
 .btn.primary {
   background: var(--primary);
   color: #fff;
   padding: 0.8rem 2rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  text-decoration: none;
 }
 .btn.secondary {
   background: #fff;
   color: var(--dark);
   padding: 0.8rem 2rem;
-  font-size: 1rem;
   border: 1px solid var(--dark);
-  border-radius: 4px;
-  text-decoration: none;
+}
+.btn.primary:hover,
+.btn.cta:hover {
+  background: #004080;
 }
 
-/* SECTION BASE */
+/* Section headings */
 .section {
   padding: 4rem 0;
-  background: var(--light);
 }
 h2 {
   font-family: 'Lora', serif;
@@ -208,7 +215,9 @@ h2 {
 }
 
 /* STEPS */
-#steps .container { text-align: center; }
+#steps .container {
+  text-align: center;
+}
 .steps-list {
   list-style: none;
   counter-reset: step;
@@ -225,7 +234,8 @@ h2 {
 .steps-list li::before {
   counter-increment: step;
   content: counter(step);
-  position: absolute; left: 0; top: 0;
+  position: absolute;
+  left: 0; top: 0;
   background: var(--primary);
   color: #fff;
   width: 2rem; height: 2rem;
@@ -255,11 +265,14 @@ h2 {
   margin-bottom: 1rem;
 }
 .slider-btn {
-  position: absolute; top: 50%;
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
   background: var(--primary);
-  border: none; color: #fff;
-  padding: 0.5rem; cursor: pointer;
+  border: none;
+  color: #fff;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 .prev { left: 1rem; }
 .next { right: 1rem; }
