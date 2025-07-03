@@ -83,37 +83,53 @@ body {
 
 /* HERO */
 .hero {
-  background: url('hero.jpg') center/cover no-repeat;
+  background-color: #b3b3b3;  /* light grey */
+  /* If you have an image, you can layer it here:
+     background: #b3b3b3 url('hero.jpg') center/cover no-repeat; */
   height: 80vh;
   display: flex;
   align-items: center;
   text-align: center;
   position: relative;
 }
-.hero::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: rgba(0,85,164,0.6);
-}
 .hero-content {
-  position: relative;
-  color: #fff;
-  max-width: 700px;
+  max-width: 800px;
   margin: 0 auto;
+  color: #fff;
 }
 .hero h1 {
   font-family: 'Lora', serif;
-  font-size: 2.8rem;
-  margin-bottom: 0.5rem;
-}
-.hero p {
-  font-size: 1.1rem;
+  font-size: 3rem;
+  line-height: 1.2;
   margin-bottom: 1rem;
 }
-.hero .btn {
-  font-size: 1rem;
+.hero p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
 }
 
+/* Hero buttons */
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+.btn.primary {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+.btn.secondary {
+  background: #fff;
+  color: var(--dark);
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+}
 /* SECTION BASE */
 .section { padding: 4rem 0; background: #fff; }
 .section.alt { background: var(--light); }
