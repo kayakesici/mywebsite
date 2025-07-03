@@ -83,7 +83,7 @@ body {
   .nav-toggle { display: block; }
 }
 
-/* SECTIONS */
+/* SECTION BASE */
 .section {
   padding: 4rem 0;
   background: #fff;
@@ -210,7 +210,7 @@ h2 {
   justify-content: center;
 }
 
-/* STEPS (centered) */
+/* 5 STEPS */
 .steps-container {
   text-align: center;
 }
