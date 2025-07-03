@@ -1,8 +1,8 @@
 :root {
-  --primary: #212121;         /* dark text */
-  --accent: #FF3C78;          /* hot-pink accent */
-  --light-bg: #FAFAFA;        /* section alt background */
-  --dark-bg: #222;            /* footer background */
+  --primary: #212121;        /* main text */
+  --accent: #0055A4;         /* your original deep blue */
+  --light-bg: #FAFAFA;       /* alternate section background */
+  --dark-bg: #222;           /* footer background */
   --font-sans: 'Public Sans', sans-serif;
 }
 
@@ -10,9 +10,9 @@
 *,
 *::before,
 *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 body {
   font-family: var(--font-sans);
@@ -70,9 +70,15 @@ body {
   transition: background .2s;
 }
 .btn.cta:hover {
-  background: #e63268;
+  background: var(--accent);
 }
-.nav-toggle { display: none; }
+.nav-toggle {
+  display: none;
+}
+@media (max-width: 900px) {
+  .nav-links, .btn.cta { display: none; }
+  .nav-toggle { display: block; }
+}
 
 /* HERO */
 .hero {
@@ -103,11 +109,15 @@ body {
   transition: background .2s;
 }
 .btn.hero-btn:hover {
-  background: #e63268;
+  background: var(--accent);
 }
 .hero-image img {
   width: 100%;
   border-radius: 8px;
+}
+@media (max-width: 900px) {
+  .hero-grid { grid-template-columns: 1fr; text-align: center; }
+  .hero-image { display: none; }
 }
 
 /* SECTIONS */
@@ -211,8 +221,7 @@ h2 {
   left: 0; top: 0;
   background: var(--accent);
   color: #fff;
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.75rem; height: 1.75rem;
   line-height: 1.75rem;
   border-radius: 50%;
   text-align: center;
@@ -325,7 +334,7 @@ h2 {
   transition: background .2s;
 }
 .plan-btn:hover {
-  background: #e63268;
+  background: var(--accent);
 }
 
 /* FAQ */
@@ -385,15 +394,7 @@ h2 {
   text-align: center;
   padding: 2rem 0;
 }
-.footer a { color: var(--accent); }
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; text-align: center; }
-  .hero-image { display: none; }
-}
-
-@media (max-width: 768px) {
-  .nav-links, .btn.cta { display: none; }
-  .nav-toggle { display: block; }
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
 }
