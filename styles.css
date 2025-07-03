@@ -1,11 +1,11 @@
 :root {
   --primary: #0055a4;
-  --accent: #ffd700;
-  --dark: #333;
-  --light: #f9f9f9;
+  --accent:  #ffd700;
+  --dark:    #333;
+  --light:   #f9f9f9;
 }
 
-/* Reset & base */
+/* RESET & BASE */
 *,
 *::before,
 *::after {
@@ -53,7 +53,6 @@ body {
   display: flex;
   gap: 2rem;
   font-size: 1.1rem;
-  white-space: nowrap;
 }
 .nav-links a {
   color: var(--dark);
@@ -84,33 +83,23 @@ body {
   .nav-toggle { display: block; }
 }
 
-/* HERO & ALL SECTIONS – light grey background */
-.hero,
+/* SECTIONS */
 .section {
-  background-color: var(--light);
+  padding: 4rem 0;
+  background: #fff;
+}
+.section.alt {
+  background: var(--light);
 }
 
-/* Make hero full-width and use gutter space */
+/* HERO */
 .hero {
-  width: 100%;
-  padding: 4rem 0;
   display: flex;
-  justify-content: center;
   align-items: center;
   text-align: center;
 }
-
-/* Override the usual container sizing inside the hero */
-.hero .container {
-  width: 100%;      /* fill the viewport */
-  max-width: none;  /* no max constraint here */
-  padding: 0 5%;    /* side padding so text doesn’t touch edges */
-}
-
-/* Now allow the hero-content area to expand */
 .hero-content {
-  max-width: 1200px; /* wider than before */
-  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
 .hero h1 {
@@ -130,7 +119,7 @@ body {
   justify-content: center;
 }
 
-/* Button styles */
+/* BUTTONS */
 .btn {
   display: inline-block;
   text-decoration: none;
@@ -154,10 +143,7 @@ body {
   background: #004080;
 }
 
-/* Section headings */
-.section {
-  padding: 4rem 0;
-}
+/* SECTION HEADINGS */
 h2 {
   font-family: 'Lora', serif;
   font-size: 2rem;
@@ -229,9 +215,6 @@ h2 {
 }
 
 /* STEPS */
-#steps .container {
-  text-align: center;
-}
 .steps-list {
   list-style: none;
   counter-reset: step;
@@ -272,7 +255,6 @@ h2 {
   min-width: 100%;
   padding: 2rem;
   text-align: center;
-  background: var(--light);
 }
 .testimonial p {
   font-style: italic;
@@ -376,7 +358,7 @@ h2 {
   display: block;
 }
 
-/* CONTACT FORM */
+/* CONTACT */
 .contact-form {
   max-width: 500px;
   margin: 0 auto;
