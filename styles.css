@@ -66,9 +66,13 @@ body {
   color: var(--primary);
 }
 .btn.cta {
-  margin-left: 2rem;
+  background: var(--primary);
+  color: #fff;
   padding: 0.6rem 1.5rem;
   font-size: 1.1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-left: 2rem;
 }
 .nav-toggle {
   display: none;
@@ -81,9 +85,9 @@ body {
   .nav-toggle { display: block; }
 }
 
-/* HERO */
+/* HERO (white background to match team) */
 .hero {
-  background-color: var(--light); /* pale grey */
+  background-color: #fff;
   height: 80vh;
   display: flex;
   align-items: center;
@@ -92,7 +96,7 @@ body {
 .hero-content {
   max-width: 800px;
   margin: 0 auto;
-  color: #fff;
+  color: var(--dark);
 }
 .hero h1 {
   font-family: 'Lora', serif;
@@ -116,13 +120,16 @@ body {
   padding: 0.8rem 2rem;
   font-size: 1rem;
   border-radius: 4px;
+  text-decoration: none;
 }
 .btn.secondary {
   background: #fff;
   color: var(--dark);
   padding: 0.8rem 2rem;
   font-size: 1rem;
+  border: 1px solid var(--dark);
   border-radius: 4px;
+  text-decoration: none;
 }
 
 /* SECTION BASE */
@@ -179,9 +186,9 @@ h2 {
   list-style: disc inside;
   max-width: 600px;
   margin: 0 auto;
-  text-align: center;   /* centre the bullets/text */
-  gap: 0.5rem;
+  text-align: center;
   display: grid;
+  gap: 0.5rem;
 }
 
 /* WHY */
@@ -195,15 +202,18 @@ h2 {
 .why-list li {
   display: flex;
   align-items: center;
-  justify-content: center; /* centre the icon + text */
+  justify-content: center;
 }
 
 /* STEPS */
+#steps .container { text-align: center; }
 .steps-list {
   list-style: none;
   counter-reset: step;
-  max-width: 600px;
+  display: inline-block;
   margin: 0 auto;
+  text-align: left;
+  max-width: 600px;
 }
 .steps-list li {
   position: relative;
