@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <title>Business Exit Advisors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link 
     href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap" 
     rel="stylesheet">
-
   <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/your-kit.js" crossorigin="anonymous"></script>
-
-  <!-- OUR STYLESHEET -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
   <!-- NAVBAR -->
-  <nav class="navbar section">
+  <nav class="navbar">
     <div class="container nav-container">
       <a href="#" class="logo">Business Exit Advisors</a>
       <div class="nav-right">
@@ -31,26 +27,24 @@
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
-        <a href="#contact" class="btn cta">Free Valuation</a>
+        <a href="#contact" class="btn cta">Book a Call</a>
         <button class="nav-toggle"><i class="fas fa-bars"></i></button>
       </div>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header id="hero" class="section alt hero">
+  <header id="hero" class="hero">
     <div class="container hero-content">
-      <h1>Sell Your Business With Confidence<br>– Modern Exit Advisory for UK SMEs</h1>
-      <p>We connect serious sellers with vetted buyers — fast, discreet, and on your terms</p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn primary">Free Valuation</a>
-        <a href="#learn"   class="btn secondary">Learn More</a>
-      </div>
+      <h1>Sell Your Business in 3 Months</h1>
+      <p>Fast-track your exit with our expert M&amp;A advisory</p>
+      <a href="#contact" class="btn">Free Exit Strategy Call</a>
     </div>
   </header>
 
   <main>
-    <!-- TEAM -->
+
+    <!-- MEET THE TEAM -->
     <section id="team" class="section team">
       <div class="container">
         <h2>Meet Your Team</h2>
@@ -72,18 +66,24 @@
     </section>
 
     <!-- STATS -->
-    <section id="stats" class="section alt stats">
+    <section id="stats" class="section stats alt">
       <div class="container">
         <h2>By the Numbers</h2>
         <div class="stats-grid">
-          <div class="stat"><strong>400+</strong><span>Companies Advised</span></div>
-          <div class="stat"><strong>£500M+</strong><span>Deal Value Negotiated</span></div>
-          <div class="stat"><strong>95%</strong><span>Client Success Rate</span></div>
+          <div class="stat">
+            <strong>400+</strong><span>Companies Advised</span>
+          </div>
+          <div class="stat">
+            <strong>£500M+</strong><span>Deal Value Negotiated</span>
+          </div>
+          <div class="stat">
+            <strong>95%</strong><span>Client Success Rate</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- STRUGGLES -->
+    <!-- COMMON STRUGGLES -->
     <section id="struggles" class="section struggles">
       <div class="container">
         <h2>Common Owner Struggles</h2>
@@ -97,8 +97,8 @@
       </div>
     </section>
 
-    <!-- WHY -->
-    <section id="why" class="section alt why">
+    <!-- WHY WORK WITH US -->
+    <section id="why" class="section why alt">
       <div class="container">
         <h2>Why Work With Us</h2>
         <ul class="why-list">
@@ -106,14 +106,14 @@
           <li><i class="fas fa-check-circle"></i>Deep M&amp;A expertise &amp; network</li>
           <li><i class="fas fa-check-circle"></i>End-to-end process management</li>
           <li><i class="fas fa-check-circle"></i>Legal &amp; financial due diligence</li>
-          <li><i class="fas fa-check-circle"></i>Personalised transition support</li>
+          <li><i class="fas fa-check-circle"></i>Personalized transition support</li>
         </ul>
       </div>
     </section>
 
     <!-- 5 STEPS -->
     <section id="steps" class="section steps">
-      <div class="container steps-container">
+      <div class="container">
         <h2>5 Steps to Selling Your Business</h2>
         <ol class="steps-list">
           <li>Initial strategy &amp; goal setting</li>
@@ -126,14 +126,14 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section alt testimonials">
+    <section id="testimonials" class="section testimonials alt">
       <div class="container">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-slider">
           <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
           <div class="slides">
             <div class="testimonial">
-              <p>“They maximised our sale price and made it effortless.”</p>
+              <p>“They maximized our sale price and made it effortless.”</p>
               <strong>— CEO, Tech Startup</strong>
             </div>
             <div class="testimonial">
@@ -194,7 +194,7 @@
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section alt faq">
+    <section id="faq" class="section faq alt">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
@@ -216,24 +216,24 @@
     <section id="contact" class="section contact">
       <div class="container">
         <h2>Ready to Talk?</h2>
-        <form class="contact-form" action="mailto:info@businessexitadvisors.com" method="post">
-          <input type="text"   name="name"    placeholder="Your Name" required>
-          <input type="email"  name="email"   placeholder="Your Email" required>
+        <form class="contact-form" action="mailto:info@businessexitadvisors.com" method="post" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
           <textarea name="message" rows="5" placeholder="Tell us about your business"></textarea>
           <button type="submit" class="btn">Send Message</button>
         </form>
       </div>
     </section>
+
   </main>
 
   <!-- FOOTER -->
-  <footer class="footer section">
+  <footer class="footer">
     <div class="container">
       <p>© 2025 Business Exit Advisors | <a href="#">Privacy Policy</a></p>
     </div>
   </footer>
 
-  <!-- OUR JAVASCRIPT -->
   <script src="script.js"></script>
 </body>
 </html>
