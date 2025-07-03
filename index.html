@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <title>Business Exit Advisors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@400;600;700&display=swap" 
-    rel="stylesheet">
-  <!-- FontAwesome CSS for icons -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Font Awesome -->
   <link
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,39 +21,43 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#" class="logo">Business Exit Advisors</a>
-      <div class="nav-right">
-        <ul class="nav-links">
-          <li><a href="#why">Why Us</a></li>
-          <li><a href="#steps">5 Steps</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#faq">FAQ</a></li>
-        </ul>
-        <a href="#contact" class="btn cta">Book a Call</a>
-        <button class="nav-toggle"><i class="fa fa-bars"></i></button>
-      </div>
+      <ul class="nav-links">
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#steps">5 Steps</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#contact" class="btn cta">Book a Call</a>
+      <button class="nav-toggle"><i class="fas fa-bars"></i></button>
     </div>
   </nav>
 
   <!-- HERO -->
   <header id="hero" class="hero">
-    <div class="container hero-content">
-      <h1>Sell Your Business in 3 Months</h1>
-      <p>Fast-track your exit with our expert M&amp;A advisory</p>
-      <a href="#contact" class="btn">Free Exit Strategy Call</a>
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>Sell Your Business in 3 Months</h1>
+        <p>Fast-track your exit with our expert M&amp;A advisory</p>
+        <a href="#contact" class="btn hero-btn">Free Exit Strategy Call</a>
+      </div>
+      <div class="hero-image">
+        <!-- Optional: swap in your own hero illustration or leave blank -->
+        <img src="hero.jpg" alt="Exit advisory illustration">
+      </div>
     </div>
   </header>
 
   <main>
-
-    <!-- MEET THE TEAM -->
+    <!-- TEAM -->
     <section id="team" class="section team">
       <div class="container">
         <h2>Meet Your Team</h2>
@@ -58,14 +65,14 @@
           <div class="team-member">
             <img src="Jang.jpeg" alt="Jahangir Khan">
             <h3>Jahangir Khan</h3>
-            <p><a href="https://www.linkedin.com/in/jahangirkhan/" target="_blank">LinkedIn Profile</a></p>
-            <p>Co-Founder &amp; Head of Buyer Sourcing</p>
+            <a href="https://www.linkedin.com/in/jahangirkhan/" target="_blank" class="link">LinkedIn Profile</a>
+            <p>Co-Founder & Head of Buyer Sourcing</p>
           </div>
           <div class="team-member">
             <img src="Kaya.jpeg" alt="Kaya Kesici">
             <h3>Kaya Kesici</h3>
-            <p><a href="https://www.linkedin.com/in/kayakesici/" target="_blank">LinkedIn Profile</a></p>
-            <p>Co-Founder &amp; Deal Structuring Lead</p>
+            <a href="https://www.linkedin.com/in/kayakesici/" target="_blank" class="link">LinkedIn Profile</a>
+            <p>Co-Founder & Deal Structuring Lead</p>
           </div>
         </div>
       </div>
@@ -76,20 +83,14 @@
       <div class="container">
         <h2>By the Numbers</h2>
         <div class="stats-grid">
-          <div class="stat">
-            <strong>400+</strong><span>Companies Advised</span>
-          </div>
-          <div class="stat">
-            <strong>£500M+</strong><span>Deal Value Negotiated</span>
-          </div>
-          <div class="stat">
-            <strong>95%</strong><span>Client Success Rate</span>
-          </div>
+          <div class="stat"><strong>400+</strong><span>Companies Advised</span></div>
+          <div class="stat"><strong>£500M+</strong><span>Deal Value Negotiated</span></div>
+          <div class="stat"><strong>95%</strong><span>Client Success Rate</span></div>
         </div>
       </div>
     </section>
 
-    <!-- COMMON STRUGGLES -->
+    <!-- STRUGGLES -->
     <section id="struggles" class="section struggles">
       <div class="container">
         <h2>Common Owner Struggles</h2>
@@ -103,22 +104,22 @@
       </div>
     </section>
 
-    <!-- WHY WORK WITH US -->
-    <section id="why" class="section why alt">
+    <!-- WHY US -->
+    <section id="why" class="section why">
       <div class="container">
         <h2>Why Work With Us</h2>
         <ul class="why-list">
-          <li><i class="fa fa-check-circle"></i>Transparent, fee-first pricing</li>
-          <li><i class="fa fa-check-circle"></i>Deep M&amp;A expertise &amp; network</li>
-          <li><i class="fa fa-check-circle"></i>End-to-end process management</li>
-          <li><i class="fa fa-check-circle"></i>Legal &amp; financial due diligence</li>
-          <li><i class="fa fa-check-circle"></i>Personalized transition support</li>
+          <li><i class="fas fa-check-circle"></i>Transparent, fee-first pricing</li>
+          <li><i class="fas fa-check-circle"></i>Deep M&amp;A expertise &amp; network</li>
+          <li><i class="fas fa-check-circle"></i>End-to-end process management</li>
+          <li><i class="fas fa-check-circle"></i>Legal &amp; financial due diligence</li>
+          <li><i class="fas fa-check-circle"></i>Personalized transition support</li>
         </ul>
       </div>
     </section>
 
-    <!-- 5 STEPS -->
-    <section id="steps" class="section steps">
+    <!-- STEPS -->
+    <section id="steps" class="section steps alt">
       <div class="container">
         <h2>5 Steps to Selling Your Business</h2>
         <ol class="steps-list">
@@ -132,11 +133,11 @@
     </section>
 
     <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section testimonials alt">
+    <section id="testimonials" class="section testimonials">
       <div class="container">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-slider">
-          <button class="slider-btn prev"><i class="fa fa-chevron-left"></i></button>
+          <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
           <div class="slides">
             <div class="testimonial">
               <p>“They maximized our sale price and made it effortless.”</p>
@@ -151,82 +152,82 @@
               <strong>— Owner, Manufacturing Co.</strong>
             </div>
           </div>
-          <button class="slider-btn next"><i class="fa fa-chevron-right"></i></button>
+          <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
 
     <!-- PRICING -->
-    <section id="pricing" class="section pricing">
+    <section id="pricing" class="section pricing alt">
       <div class="container">
         <h2>Pricing Plans</h2>
         <div class="pricing-grid">
           <div class="plan">
             <h3>DIY</h3>
-            <p>Find your own buyer; we support with templates &amp; guides</p>
+            <p>Templates &amp; guides so you can source your own buyer</p>
             <div class="price">£4,997<br><span>+ £997/mo for 12 mo</span></div>
             <ul class="plan-features">
               <li>Valuation framework</li>
               <li>Outreach templates</li>
               <li>DIY legal checklist</li>
             </ul>
-            <a href="#contact" class="btn">Select DIY</a>
+            <a href="#contact" class="btn plan-btn">Select DIY</a>
           </div>
           <div class="plan popular">
             <h3>Assisted</h3>
-            <p>Everything in DIY plus negotiations &amp; vetted buyers</p>
+            <p>We find &amp; vet buyers, negotiate, and keep you covered</p>
             <div class="price">£4,997<br><span>+ £1,997/mo</span></div>
             <ul class="plan-features">
               <li>Everything in DIY</li>
               <li>Full buyer sourcing</li>
               <li>Negotiation support</li>
-              <li>Legal panel access</li>
+              <li>Access to legal panel</li>
             </ul>
-            <a href="#contact" class="btn">Select Assisted</a>
+            <a href="#contact" class="btn plan-btn">Select Assisted</a>
           </div>
           <div class="plan">
             <h3>Bespoke</h3>
-            <p>All Assisted plus IM creation &amp; dedicated coaching</p>
+            <p>All Assisted plus IM creation &amp; 1:1 coaching</p>
             <div class="price">£14,997<br><span>+ £1,997/mo</span></div>
             <ul class="plan-features">
               <li>Everything in Assisted</li>
               <li>Investment memorandum</li>
-              <li>1:1 coaching</li>
+              <li>Dedicated coaching</li>
             </ul>
-            <a href="#contact" class="btn">Select Bespoke</a>
+            <a href="#contact" class="btn plan-btn">Select Bespoke</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- FAQ -->
-    <section id="faq" class="section faq alt">
+    <section id="faq" class="section faq">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
         <div class="faq-item">
           <h4>How soon can we start?</h4>
-          <p>We can begin strategy sessions within 48 hours of onboarding.</p>
+          <p>We can begin strategy sessions within 48 hours.</p>
         </div>
         <div class="faq-item">
           <h4>Is there a success fee?</h4>
-          <p>No additional success fee—upfront fees offset final deal fees.</p>
+          <p>No—upfront fees offset final deal fees.</p>
         </div>
         <div class="faq-item">
           <h4>Do you handle cross-border deals?</h4>
-          <p>Yes, we work with international buyers and counsel.</p>
+          <p>Yes—our network spans international buyers and counsel.</p>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="section contact">
+    <section id="contact" class="section contact alt">
       <div class="container">
         <h2>Ready to Talk?</h2>
         <form class="contact-form" action="mailto:info@businessexitadvisors.com" method="post" enctype="text/plain">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
           <textarea name="message" rows="5" placeholder="Tell us about your business"></textarea>
-          <button type="submit" class="btn">Send Message</button>
+          <button type="submit" class="btn hero-btn">Send Message</button>
         </form>
       </div>
     </section>
@@ -236,7 +237,7 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <p>© 2025 Business Exit Advisors | <a href="#">Privacy Policy</a></p>
+      <p>© 2025 Business Exit Advisors | <a href="#">Privacy Policy</a></p>
     </div>
   </footer>
 
