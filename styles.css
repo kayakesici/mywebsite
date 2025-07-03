@@ -133,8 +133,10 @@ body {
 }
 
 /* SECTION BASE */
-.section { padding: 4rem 0; background: #fff; }
-.section.alt { background: var(--light); }
+.section {
+  padding: 4rem 0;
+  background: var(--light);
+}
 h2 {
   font-family: 'Lora', serif;
   font-size: 2rem;
