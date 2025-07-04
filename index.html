@@ -6,10 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 
   <!-- Font Awesome -->
   <link
@@ -20,10 +17,15 @@
     referrerpolicy="no-referrer"
   />
 
-  <!-- Your full CSS -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
+  <!-- BUMP BAR -->
+  <div class="bump-bar">
+    <a href="#contact" class="btn bump-btn">Free Exit Call</a>
+  </div>
 
   <!-- NAVBAR -->
   <nav class="navbar">
@@ -42,20 +44,31 @@
 
   <!-- HERO -->
   <section id="hero" class="hero">
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="hero.mp4" type="video/mp4">
+      <source src="hero.webm" type="video/webm">
+    </video>
+    <div class="hero-overlay"></div>
     <div class="hero-grid container">
       <div class="hero-text">
-        <h1>Exit on Your Terms in 90 Days — Maximize Your Sale</h1>
-        <p>150+ Deals Closed</p>
+        <h1>Exit on Your Terms in 90 Days</h1>
+        <p class="hero-subhead">150+ Deals Closed • £500M+ Negotiated • 95% Success Rate</p>
         <ul class="hero-bullets">
-          <li>✔ Personalized Valuation Roadmap</li>
-          <li>✔ Access to Exclusive Buyer Network</li>
-          <li>✔ End-to-End Due-Diligence &amp; Negotiation Support</li>
+          <li>Maximize Your Valuation</li>
+          <li>Tap Our Vetted Buyer Network</li>
+          <li>Done-For-You Due-Diligence & Negotiation</li>
         </ul>
-        <a href="#contact" class="btn hero-btn">Lock in Your Free Exit Strategy Call</a>
-        <p class="subheading">No obligations • 15-min clarity session</p>
+        <a href="#contact" class="btn hero-btn">Free Exit Call</a>
+        <span class="hero-subtext">No obligations • 15-min clarity session</span>
+
+        <div class="trust-logos">
+          <img src="forbes.png"      alt="Featured in Forbes">
+          <img src="inc.png"         alt="Featured in Inc.">
+          <img src="entrepreneur.png" alt="Featured in Entrepreneur">
+        </div>
       </div>
       <div class="hero-image">
-        <img src="hero.jpg" alt="Two founders shaking hands over a signed contract">
+        <img src="hero-fallback.jpg" alt="Founders shaking hands">
       </div>
     </div>
   </section>
@@ -69,13 +82,13 @@
           <img src="Jang.jpeg" alt="Jahangir Khan">
           <h3>Jahangir Khan</h3>
           <a href="https://www.linkedin.com/in/jahangirkhan/" class="link" target="_blank">LinkedIn Profile</a>
-          <p>Co-Founder &amp; Head of Buyer Sourcing</p>
+          <p>Co-Founder & Head of Buyer Sourcing</p>
         </div>
         <div class="team-member">
           <img src="Kaya.jpeg" alt="Kaya Kesici">
           <h3>Kaya Kesici</h3>
           <a href="https://www.linkedin.com/in/kayakesici/" class="link" target="_blank">LinkedIn Profile</a>
-          <p>Co-Founder &amp; Deal Structuring Lead</p>
+          <p>Co-Founder & Deal Structuring Lead</p>
         </div>
       </div>
     </div>
@@ -86,9 +99,18 @@
     <div class="container">
       <h2>By the Numbers</h2>
       <div class="stats-grid">
-        <div class="stat"><strong>400+</strong><span>Companies Advised</span></div>
-        <div class="stat"><strong>£500M+</strong><span>Deal Value Negotiated</span></div>
-        <div class="stat"><strong>95%</strong><span>Client Success Rate</span></div>
+        <div class="stat">
+          <strong class="counter" data-target="400">0</strong>
+          <span>Companies Advised</span>
+        </div>
+        <div class="stat">
+          <strong class="counter" data-target="500">£0M+</strong>
+          <span>Deal Value Negotiated</span>
+        </div>
+        <div class="stat">
+          <strong class="counter" data-target="95">0%</strong>
+          <span>Client Success Rate</span>
+        </div>
       </div>
     </div>
   </section>
@@ -102,32 +124,32 @@
         <div class="card">
           <div class="card-icon">🧐</div>
           <h3>Ambiguous Sale Objectives</h3>
-          <p>Stop second-guessing why and when you want to exit with our 4-MAT deep dive.</p>
+          <p>Stop second-guessing why and when you want to exit. Our 4-MAT deep dive teases out your true motivations.</p>
         </div>
         <div class="card">
           <div class="card-icon">👥</div>
           <h3>Management Succession Uncertainty</h3>
-          <p>Map leadership gaps and build a transition plan that keeps everyone confident.</p>
+          <p>Worried who’ll run things post-sale? We map leadership gaps and build a transition plan that keeps everyone confident.</p>
         </div>
         <div class="card">
           <div class="card-icon">📄</div>
           <h3>Operational Documentation Gaps</h3>
-          <p>Codify processes and package everything buyers need to avoid due diligence delays.</p>
+          <p>Missing SOPs and training materials can grind due diligence to a halt. We package everything buyers need.</p>
         </div>
         <div class="card">
           <div class="card-icon">💰</div>
           <h3>Financial Transparency Issues</h3>
-          <p>Clean up books, standardize reporting, and highlight the metrics that matter.</p>
+          <p>Disorganized ledgers or hidden arrears spook acquirers. We clean up your books and highlight the metrics that matter.</p>
         </div>
         <div class="card">
           <div class="card-icon">🤝</div>
-          <h3>Customer &amp; Contract Concentration</h3>
-          <p>Identify concentration risks and reshape agreements for maximum buyer comfort.</p>
+          <h3>Customer & Contract Concentration</h3>
+          <p>Relying on a handful of clients puts deals at risk. We reshape agreements for maximum buyer comfort.</p>
         </div>
         <div class="card">
           <div class="card-icon">⚖️</div>
           <h3>Deal Structure Misalignment</h3>
-          <p>Align valuation, terms, and timelines so negotiations move forward smoothly.</p>
+          <p>Clashing price expectations or transition terms stall negotiations. We align valuation, structure, and timeline for a win-win.</p>
         </div>
       </div>
     </div>
@@ -139,30 +161,12 @@
       <h2>What Makes Us Different</h2>
       <p class="subheading">We don’t just broker exits—we transform the entire journey.</p>
       <div class="differentiators-cards">
-        <div class="card">
-          <h3>Exit-Ready Preparation Program</h3>
-          <p>Prepare operations, finances &amp; legals so you hit the market at peak value.</p>
-        </div>
-        <div class="card">
-          <h3>Personal Wealth Transition Strategy</h3>
-          <p>Bespoke planning for your finances, legacy &amp; life-after-exit.</p>
-        </div>
-        <div class="card">
-          <h3>Confidential Buyer Network</h3>
-          <p>Access a vetted pool of buyers &amp; investors through discreet outreach.</p>
-        </div>
-        <div class="card">
-          <h3>Performance-Based Fees</h3>
-          <p>No hefty retainers—our incentives kick in only on successful deal completion.</p>
-        </div>
-        <div class="card">
-          <h3>SME Expertise</h3>
-          <p>We speak the owner-led playbook—your unique challenges are our specialty.</p>
-        </div>
-        <div class="card">
-          <h3>Post-Sale Support &amp; Legacy</h3>
-          <p>From staff transitions to founder mentoring, we support you beyond closing.</p>
-        </div>
+        <div class="card"><h3>Exit-Ready Preparation Program</h3><p>Prepare ops, finances & legals for peak value.</p></div>
+        <div class="card"><h3>Personal Wealth Transition Strategy</h3><p>Bespoke planning for your finances, legacy & life-after-exit.</p></div>
+        <div class="card"><h3>Confidential Buyer Network</h3><p>Access a vetted pool of qualified buyers & investors.</p></div>
+        <div class="card"><h3>Performance-Based Fees</h3><p>No hefty retainers—our incentives kick in only on success.</p></div>
+        <div class="card"><h3>SME Expertise</h3><p>We speak the owner-led playbook—your unique challenges are our specialty.</p></div>
+        <div class="card"><h3>Post-Sale Support & Legacy</h3><p>From staff transitions to mentoring, we support you beyond closing.</p></div>
       </div>
     </div>
   </section>
@@ -173,9 +177,9 @@
       <h2>Why Work With Us</h2>
       <ul class="why-list">
         <li><i class="fas fa-check-circle"></i>Transparent, fee-first pricing</li>
-        <li><i class="fas fa-check-circle"></i>Deep M&amp;A expertise &amp; network</li>
+        <li><i class="fas fa-check-circle"></i>Deep M&A expertise & network</li>
         <li><i class="fas fa-check-circle"></i>End-to-end process management</li>
-        <li><i class="fas fa-check-circle"></i>Legal &amp; financial due diligence</li>
+        <li><i class="fas fa-check-circle"></i>Legal & financial due diligence</li>
         <li><i class="fas fa-check-circle"></i>Personalized transition support</li>
       </ul>
     </div>
@@ -186,11 +190,11 @@
     <div class="container">
       <h2>5 Steps to Selling Your Business</h2>
       <ol class="steps-list">
-        <li>Discovery &amp; Goals Session</li>
-        <li>Valuation &amp; Gap Analysis</li>
+        <li>Discovery & Goals Session</li>
+        <li>Valuation & Gap Analysis</li>
         <li>Exit-Ready Transformation Plan</li>
-        <li>Targeted Buyer Search &amp; Outreach</li>
-        <li>Negotiation &amp; Closing</li>
+        <li>Targeted Buyer Search & Outreach</li>
+        <li>Negotiation & Closing</li>
       </ol>
     </div>
   </section>
@@ -202,18 +206,9 @@
       <div class="testimonial-slider">
         <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
         <div class="slides">
-          <div class="testimonial">
-            <p>“They maximized our sale price and made it effortless.”</p>
-            <strong>— CEO, Tech Startup</strong>
-          </div>
-          <div class="testimonial">
-            <p>“Professional, transparent, and results-driven.”</p>
-            <strong>— Founder, Retail Chain</strong>
-          </div>
-          <div class="testimonial">
-            <p>“A flawless process from start to finish.”</p>
-            <strong>— Owner, Manufacturing Co.</strong>
-          </div>
+          <div class="testimonial"><p>“They maximized our sale price and made it effortless.”</p><strong>— CEO, Tech Startup</strong></div>
+          <div class="testimonial"><p>“Professional, transparent, and results-driven.”</p><strong>— Founder, Retail Chain</strong></div>
+          <div class="testimonial"><p>“A flawless process from start to finish.”</p><strong>— Owner, Manufacturing Co.</strong></div>
         </div>
         <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
       </div>
@@ -226,37 +221,21 @@
       <h2>Pricing Plans</h2>
       <div class="pricing-cards">
         <div class="card">
-          <h3>DIY</h3>
-          <p class="plan-desc">Templates &amp; guides so you source your own buyer</p>
+          <h3>DIY</h3><p class="plan-desc">Templates & guides so you source your own buyer</p>
           <div class="price"><strong>£4,997</strong><span>+ £997/mo for 12 mo</span></div>
-          <ul class="plan-features">
-            <li>Valuation framework</li>
-            <li>Outreach templates</li>
-            <li>DIY legal checklist</li>
-          </ul>
+          <ul class="plan-features"><li>Valuation framework</li><li>Outreach templates</li><li>DIY legal checklist</li></ul>
           <a href="#contact" class="btn plan-btn">Select DIY</a>
         </div>
-        <div class="card popular-outline">
-          <h3>Assisted</h3>
-          <p class="plan-desc">We find &amp; vet buyers, negotiate, keep you covered</p>
+        <div class="card">
+          <h3>Assisted</h3><p class="plan-desc">We find & vet buyers, negotiate, keep you covered</p>
           <div class="price"><strong>£4,997</strong><span>+ £1,997/mo</span></div>
-          <ul class="plan-features">
-            <li>Everything in DIY</li>
-            <li>Full buyer sourcing</li>
-            <li>Negotiation support</li>
-            <li>Access to legal panel</li>
-          </ul>
+          <ul class="plan-features"><li>Everything in DIY</li><li>Full buyer sourcing</li><li>Negotiation support</li><li>Access to legal panel</li></ul>
           <a href="#contact" class="btn plan-btn">Select Assisted</a>
         </div>
         <div class="card">
-          <h3>Bespoke</h3>
-          <p class="plan-desc">All Assisted plus IM creation &amp; coaching</p>
+          <h3>Bespoke</h3><p class="plan-desc">All Assisted plus IM creation & coaching</p>
           <div class="price"><strong>£14,997</strong><span>+ £1,997/mo</span></div>
-          <ul class="plan-features">
-            <li>Everything in Assisted</li>
-            <li>Investment memorandum</li>
-            <li>Dedicated coaching</li>
-          </ul>
+          <ul class="plan-features"><li>Everything in Assisted</li><li>Investment memorandum</li><li>Dedicated coaching</li></ul>
           <a href="#contact" class="btn plan-btn">Select Bespoke</a>
         </div>
       </div>
@@ -267,18 +246,9 @@
   <section id="faq" class="section faq">
     <div class="container">
       <h2>Frequently Asked Questions</h2>
-      <div class="faq-item">
-        <h4>How soon can we start?</h4>
-        <p>Within 48 hours of onboarding.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Is there a success fee?</h4>
-        <p>No—upfront fees offset final deal fees.</p>
-      </div>
-      <div class="faq-item">
-        <h4>Do you handle cross-border deals?</h4>
-        <p>Yes—our network spans international buyers and counsel.</p>
-      </div>
+      <div class="faq-item"><h4>How soon can we start?</h4><p>Within 48 hours of onboarding.</p></div>
+      <div class="faq-item"><h4>Is there a success fee?</h4><p>No—upfront fees offset final deal fees.</p></div>
+      <div class="faq-item"><h4>Do you handle cross-border deals?</h4><p>Yes—our network spans international buyers and counsel.</p></div>
     </div>
   </section>
 
@@ -286,12 +256,9 @@
   <section id="contact" class="section contact alt">
     <div class="container">
       <h2>Ready to Talk?</h2>
-      <!-- contact form here -->
+      <!-- embed your form or calendly widget here -->
     </div>
   </section>
-
-  <!-- BACK TO TOP BUTTON -->
-  <button id="backToTop" title="Back to top"><i class="fas fa-chevron-up"></i></button>
 
   <!-- FOOTER -->
   <footer class="footer">
@@ -300,7 +267,6 @@
     </div>
   </footer>
 
-  <!-- Your JS -->
   <script src="script.js"></script>
 </body>
 </html>
