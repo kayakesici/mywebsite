@@ -330,7 +330,7 @@ h2 {
 .slides {
   display: flex;
   overflow: hidden;
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* Was: smooth; Now: instant jump */
 }
 .testimonial {
   min-width: 100%;
