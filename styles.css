@@ -107,14 +107,14 @@ body {
   font-size: 1.1rem;
   margin-bottom: 1rem;
 }
+/* — your existing hero styles above — */
+
 .hero-bullets {
   list-style: disc inside;
   margin-bottom: 1.5rem;
+  padding-left: 1em;  /* indent so bullets and subtext line up */
 }
-.hero-bullets li {
-  margin-bottom: .5rem;
-  font-weight: 600;
-}
+
 .btn.hero-btn {
   background: var(--accent);
   color: #fff;
@@ -124,14 +124,16 @@ body {
   font-weight: 600;
   transition: background .2s;
   display: inline-block;
-  margin-bottom: 0; /* reset any default bottom margin */
+  margin-bottom: 0;      /* remove any accidental bottom margin */
 }
-/* our new subtext directly below the button */
+
+/* style the subtitle under the button */
 .hero-subtext {
-  margin-top: 1rem;         /* same gap you use between bullets */
-  font-size: 0.9rem;
+  display: block;
+  padding-left: 1em;     /* same as .hero-bullets */
+  margin-top: .5rem;     /* adjust vertical gap as you like */
+  font-size: .9rem;
   color: #555;
-  text-align: center;
 }
 
 /* ensure the hero-text block centers its contents on mobile */
