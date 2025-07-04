@@ -3,13 +3,7 @@
   --accent: #0055A4;
   --light-bg: #FAFAFA;
   --dark-bg: #222;
-  --highlight-ring: #A9D6F3;
   --font-sans: 'Public Sans', sans-serif;
-}
-
-/* Enable smooth scrolling for in-page links */
-html {
-  scroll-behavior: smooth;
 }
 
 /* RESET & BASE */
@@ -102,14 +96,6 @@ body {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
-.hero-bullets {
-  list-style: disc inside;
-  margin-bottom: 1.5rem;
-}
-.hero-bullets li {
-  margin-bottom: .5rem;
-  font-weight: 600;
-}
 .btn.hero-btn {
   background: var(--accent);
   color: #fff;
@@ -118,12 +104,6 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: background .2s;
-}
-.subheading {
-  text-align: center;
-  color: #555;
-  margin: .5rem 0 2rem;
-  font-size: 1rem;
 }
 .hero-image img {
   width: 100%;
@@ -184,7 +164,15 @@ h2 {
   color: #555;
 }
 
-/* BUBBLE CARDS (selling struggles, differentiators, pricing) */
+/* ---------------------------------------------- */
+/* Bubble cards (Selling Struggles, Differentiators, Pricing) */
+/* ---------------------------------------------- */
+.subheading {
+  text-align: center;
+  color: #555;
+  margin: .5rem 0 2rem;
+  font-size: 1rem;
+}
 .struggles-cards,
 .differentiators-cards,
 .pricing-cards {
@@ -230,12 +218,6 @@ h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
-
-/* Light-blue ring around the “Most Popular” card */
-.card.popular {
-  outline: 3px solid var(--highlight-ring);
-  outline-offset: 4px;
-}
 .card.popular .badge {
   position: absolute;
   top: -0.6rem; left: 50%;
@@ -247,7 +229,6 @@ h2 {
   font-size: .75rem;
   font-weight: 600;
 }
-
 .card h3 {
   font-size: 1.25rem;
   margin-bottom: .5rem;
@@ -260,7 +241,7 @@ h2 {
   flex-grow: 1;
 }
 
-/* PRICING SPECIFICS */
+/* Pricing specifics */
 .plan-desc {
   color: #555;
   margin-bottom: 1rem;
