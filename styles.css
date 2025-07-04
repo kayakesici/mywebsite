@@ -231,7 +231,7 @@ h2 {
   margin-bottom: 1rem;
 }
 
-/* Light-blue ring around the “Most Popular” card */
+/* Highlight ring on the “Most Popular” card */
 .card.popular {
   outline: 3px solid var(--highlight-ring);
   outline-offset: 4px;
