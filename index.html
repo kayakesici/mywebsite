@@ -27,7 +27,7 @@
   <!-- NAVBAR -->
   <nav class="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo">Business Exit Advisors</a>
+      <a href="#hero" class="logo">Business Exit Advisors</a>
       <ul class="nav-links">
         <li><a href="#why">Why Us</a></li>
         <li><a href="#steps">5 Steps</a></li>
@@ -40,11 +40,11 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero">
+  <section id="hero" class="hero">
     <div class="hero-grid container">
       <div class="hero-text">
         <h1>Exit on Your Terms in 90 Days — Maximize Your Sale</h1>
-        <p>150+ Deals Closed • 6× Average EBITDA Multiple</p>
+        <p>150+ Deals Closed</p>
         <ul class="hero-bullets">
           <li>✔ Personalized Valuation Roadmap</li>
           <li>✔ Access to Exclusive Buyer Network</li>
@@ -52,11 +52,6 @@
         </ul>
         <a href="#contact" class="btn hero-btn">Lock in Your Free Exit Strategy Call</a>
         <p class="subheading">No obligations • 15-min clarity session</p>
-        <ul class="trust-bar">
-          <li>Featured in Forbes</li>
-          <li>Inc.</li>
-          <li>Entrepreneur</li>
-        </ul>
       </div>
       <div class="hero-image">
         <img src="hero.jpg" alt="Two founders shaking hands over a signed contract">
@@ -291,7 +286,7 @@
   <section id="contact" class="section contact alt">
     <div class="container">
       <h2>Ready to Talk?</h2>
-      <!-- Insert your contact form here -->
+      <!-- Your contact form goes here -->
     </div>
   </section>
 
@@ -302,19 +297,5 @@
     </div>
   </footer>
 
-  <!-- Optional JS for smooth scrolling & FAQ -->
-  <script>
-    document.querySelectorAll('.btn.hero-cta').forEach(el =>
-      el.addEventListener('click', e => {
-        e.preventDefault();
-        document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-      })
-    );
-    document.querySelectorAll('.faq-item h4').forEach(h4 =>
-      h4.addEventListener('click', () =>
-        h4.parentElement.classList.toggle('open')
-      )
-    );
-  </script>
 </body>
 </html>
