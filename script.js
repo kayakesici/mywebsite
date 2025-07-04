@@ -18,27 +18,23 @@ document.querySelector('.prev').addEventListener('click', () => {
   slides.style.transform = `translateX(-${idx * 100}%)`;
 });
 
-// smooth scroll for in-page links
-function smoothScroll(targetSelector, duration) {
+// linear scroll for in-page links
+function linearScroll(targetSelector, duration) {
   const target = document.querySelector(targetSelector);
+  if (!target) return;
   const targetPos = target.getBoundingClientRect().top + window.pageYOffset;
   const startPos = window.pageYOffset;
   const distance = targetPos - startPos;
   let startTime = null;
 
-  function easeInOutQuad(t, b, c, d) {
-    t /= d/2;
-    if (t < 1) return c/2*t*t + b;
-    t--;
-    return -c/2 * (t*(t-2) - 1) + b;
-  }
-
   function animate(time) {
     if (startTime === null) startTime = time;
     const elapsed = time - startTime;
-    const run = easeInOutQuad(elapsed, startPos, distance, duration);
-    window.scrollTo(0, run);
-    if (elapsed < duration) requestAnimationFrame(animate);
+    const progress = Math.min(elapsed / duration, 1);
+    window.scrollTo(0, startPos + distance * progress);
+    if (progress < 1) {
+      requestAnimationFrame(animate);
+    }
   }
 
   requestAnimationFrame(animate);
@@ -49,7 +45,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     const href = a.getAttribute('href');
     if (href.length > 1) {
       e.preventDefault();
-      smoothScroll(href, 600);
+      linearScroll(href, 600); // 600ms duration, linear animation
     }
   });
 });
@@ -67,5 +63,6 @@ window.addEventListener('scroll', () => {
   backBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
 backBtn.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+  // Changed to use linear scroll for consistency
+  linearScroll('body', 600);
 });
