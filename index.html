@@ -5,11 +5,32 @@
   <title>Business Exit Advisors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO Meta -->
+  <meta name="description" content="Maximize your business sale in just 90 days with our proven 5-step process. Over £500M+ in deals closed, 95% success rate.">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Exit on Your Terms in 90 Days — Business Exit Advisors">
+  <meta property="og:description" content="Maximize your business sale in just 90 days with our proven 5-step process. Over £500M+ in deals closed, 95% success rate.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:url"   content="https://businessacquisitiongroup.co.uk/">
+  <meta name="twitter:card"  content="summary_large_image">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context":  "https://schema.org",
+    "@type":     "Organization",
+    "name":      "Business Exit Advisors",
+    "url":       "https://businessacquisitiongroup.co.uk/",
+    "logo":      "https://businessacquisitiongroup.co.uk/assets/logo.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/business-acquisition-group"
+    ]
+  }
+  </script>
+
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap"
-    rel="stylesheet"
-  />
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet"/>
 
   <!-- Font Awesome -->
   <link
@@ -20,7 +41,17 @@
     referrerpolicy="no-referrer"
   />
 
+  <!-- Your CSS -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
 
@@ -154,9 +185,10 @@
           <h3>Performance-Based Fees</h3>
           <p>No hefty retainers—our incentives kick in only on successful deal completion.</p>
         </div>
-        <div class="card">
+        <div class="card popular">
           <h3>SME Expertise</h3>
           <p>We speak the owner-led playbook—your unique challenges are our specialty.</p>
+          <div class="badge">Most Popular</div>
         </div>
         <div class="card">
           <h3>Post-Sale Support & Legacy</h3>
