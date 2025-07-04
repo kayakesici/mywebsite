@@ -165,7 +165,7 @@ h2 {
 }
 
 /* ---------------------------------------------- */
-/* Bubble cards (Selling Struggles, Differentiators, Pricing) */
+/* Bubble cards (Selling Struggles, Differentiators, Pricing, Why Us) */
 /* ---------------------------------------------- */
 .subheading {
   text-align: center;
@@ -175,12 +175,14 @@ h2 {
 }
 .struggles-cards,
 .differentiators-cards,
-.pricing-cards {
+.pricing-cards,
+.why-cards {
   display: grid;
   gap: 1rem;
 }
 .struggles-cards,
-.differentiators-cards {
+.differentiators-cards,
+.why-cards {
   grid-template-columns: repeat(3,1fr);
 }
 .pricing-cards {
@@ -191,7 +193,8 @@ h2 {
 @media (max-width: 900px) {
   .struggles-cards,
   .differentiators-cards,
-  .pricing-cards {
+  .pricing-cards,
+  .why-cards {
     grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
   }
 }
@@ -279,7 +282,7 @@ h2 {
   font-size: .6rem;
 }
 
-/* WHY US */
+/* WHY US (legacy list for backward compatibility, not used now) */
 .why-list {
   max-width: 700px;
   margin: 0 auto;
