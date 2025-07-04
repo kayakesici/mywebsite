@@ -96,6 +96,14 @@ body {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
 }
+.hero-bullets {
+  list-style: disc inside;
+  margin-bottom: 1.5rem;
+}
+.hero-bullets li {
+  margin-bottom: .5rem;
+  font-weight: 600;
+}
 .btn.hero-btn {
   background: var(--accent);
   color: #fff;
@@ -164,9 +172,7 @@ h2 {
   color: #555;
 }
 
-/* ---------------------------------------------- */
 /* Bubble cards (Selling Struggles, Differentiators, Pricing) */
-/* ---------------------------------------------- */
 .subheading {
   text-align: center;
   color: #555;
