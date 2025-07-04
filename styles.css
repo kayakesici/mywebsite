@@ -123,21 +123,9 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: background .2s;
-}
-/* ↓ put this near your hero styles ↓ */
-
-.btn.hero-btn {
-  background: var(--accent);
-  color: #fff;
-  padding: .8rem 1.6rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background .2s;
   display: inline-block;
-  margin-bottom: 0; /* reset if needed */
+  margin-bottom: 0; /* reset any default bottom margin */
 }
-
 /* our new subtext directly below the button */
 .hero-subtext {
   margin-top: 1rem;         /* same gap you use between bullets */
