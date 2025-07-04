@@ -124,6 +124,34 @@ body {
   font-weight: 600;
   transition: background .2s;
 }
+/* ↓ put this near your hero styles ↓ */
+
+.btn.hero-btn {
+  background: var(--accent);
+  color: #fff;
+  padding: .8rem 1.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background .2s;
+  display: inline-block;
+  margin-bottom: 0; /* reset if needed */
+}
+
+/* our new subtext directly below the button */
+.hero-subtext {
+  margin-top: 1rem;         /* same gap you use between bullets */
+  font-size: 0.9rem;
+  color: #555;
+  text-align: center;
+}
+
+/* ensure the hero-text block centers its contents on mobile */
+@media (max-width: 900px) {
+  .hero-text {
+    text-align: center;
+  }
+}
 .subheading {
   text-align: center;
   color: #555;
