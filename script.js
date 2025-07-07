@@ -2,6 +2,15 @@
 document.querySelector('.nav-toggle').addEventListener('click', () => {
   document.querySelector('.nav-links').classList.toggle('show');
   document.querySelector('.btn.cta').classList.toggle('show');
+  // NEW: mobile nav toggle
+  document.getElementById('mobileNav').classList.toggle('show');
+});
+
+// NEW: mobile nav hide on link click
+document.querySelectorAll('#mobileNav a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobileNav').classList.remove('show');
+  });
 });
 
 // testimonial slider
