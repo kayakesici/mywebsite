@@ -86,24 +86,23 @@ body {
   .nav-links.show {
     display: flex;
     flex-direction: column;
-    position: absolute;
-    right: 0;
-    top: 65px; /* Adjust if your navbar height differs */
+    position: fixed;
+    left: 0;
+    top: 56px; /* Adjust to match navbar height */
+    width: 100vw;
     background: #fff;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    width: 200px;
-    padding: 1rem 0;
-    gap: 1rem;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.10);
+    border-bottom: 1px solid #e5e5e5;
+    padding: 1.5rem 0 0.5rem 0;
+    gap: 1.5rem;
     z-index: 1000;
+    animation: dropdownSlide 0.3s cubic-bezier(0.4,0,0.2,1);
   }
   .btn.cta.show {
     display: block;
-    position: absolute;
-    right: 0;
-    top: calc(65px + 200px); /* Adjust depending on menu height */
-    width: 200px;
-    margin: 0;
+    width: 90vw;
+    margin: 1rem auto 0 auto;
+    position: static;
     text-align: center;
     z-index: 1001;
   }
@@ -112,6 +111,18 @@ body {
     margin-left: 1rem;
   }
 }
+/* Dropdown animation */
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* HERO */
 .hero {
   background: var(--light-bg);
