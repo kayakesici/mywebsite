@@ -82,11 +82,30 @@ body {
   cursor: pointer;
 }
 
-/* --- MOBILE MENU: GROUPED DROPDOWN LIKE MODERN CARD --- */
+/* --- NAVBAR MOBILE GROUPED DROPDOWN LIKE MODERN CARD --- */
+/* Hide mobile CTA in desktop, show desktop CTA */
+.mobile-cta { display: none; }
+.desktop-cta { display: inline-block; }
+
 @media (max-width: 900px) {
   .nav-links,
   .btn.cta {
     display: none;
+  }
+  .desktop-cta { display: none; }
+  .mobile-cta { display: block; }
+  .mobile-cta .btn.cta {
+    display: block;
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    text-align: center;
+    font-size: 1.13rem;
+    font-weight: 600;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    padding: 1rem 0;
+    background: var(--accent);
+    color: #fff;
   }
   .nav-links.show {
     display: flex;
@@ -132,25 +151,6 @@ body {
   }
   .btn.cta {
     display: none;
-  }
-  .nav-links.show + .btn.cta.show {
-    display: block;
-    margin: 1rem 1.2rem 0 1.2rem;
-    width: calc(100% - 2.4rem);
-    background: var(--accent);
-    color: #fff;
-    border-radius: 10px;
-    font-size: 1.13rem;
-    font-weight: 600;
-    padding: 1rem 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    text-align: center;
-    border: none;
-    text-decoration: none;
-    transition: background 0.2s;
-    position: relative;
-    z-index: 1;
-    letter-spacing: 0.01em;
   }
   .nav-toggle {
     display: block;
@@ -581,3 +581,5 @@ h2 {
 ::-webkit-scrollbar-thumb:hover {
   background: #b5b5b5;
 }
+
+/* --- END OF FILE --- */
