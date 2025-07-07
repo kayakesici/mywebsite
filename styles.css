@@ -1,599 +1,528 @@
-:root {
-  --primary: #212121;
-  --accent: #0055A4;
-  --light-bg: #FAFAFA;
-  --dark-bg: #222;
-  --font-sans: 'Public Sans', sans-serif;
-}
-/* RESET & BASE */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: var(--font-sans);
-  color: var(--primary);
-  line-height: 1.6;
-  background: #fff;
-}
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-/* NAVBAR */
-.navbar {
-  position: sticky;
-  top: 0;
-  background: #fff;
-  z-index: 100;
-  border-bottom: 1px solid #e5e5e5;
-}
-.nav-container {
-  display: flex;
-  align-items: center;
-  padding: 1rem 0;
-  position: relative;
-}
-.logo {
-  font-weight: 700;
-  font-size: 1.25rem;
-  color: var(--primary);
-  text-decoration: none;
-  margin-right: auto;
-}
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 2rem;
-}
-.nav-links a {
-  text-decoration: none;
-  font-weight: 600;
-  color: var(--primary);
-  transition: color .2s;
-  display: block;
-  padding: 0.5rem 0;
-}
-.nav-links a:hover {
-  color: var(--accent);
-}
-.btn.cta {
-  margin-left: 2rem;
-  padding: 0.5rem 1.2rem;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background .2s;
-  border: none;
-  cursor: pointer;
-}
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: var(--primary);
-  cursor: pointer;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Business Exit Advisors</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-/* --- NAVBAR MOBILE GROUPED DROPDOWN LIKE MODERN CARD --- */
-/* Hide mobile CTA in desktop, show desktop CTA */
-.mobile-cta { display: none; }
-.desktop-cta { display: inline-block; }
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-@media (max-width: 900px) {
-  .nav-links,
-  .btn.cta {
-    display: none;
-  }
-  .desktop-cta { display: none; }
-  .mobile-cta { display: block; }
-  .mobile-cta .btn.cta {
-    display: block;
-    width: 90%;
-    margin: 1rem auto 0 auto;
-    text-align: center;
-    font-size: 1.13rem;
-    font-weight: 600;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
-    padding: 1rem 0;
-    background: var(--accent);
-    color: #fff;
-  }
-  .nav-links.show {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    position: absolute;
-    top: 60px; /* adjust if your navbar height is different */
-    right: 1rem;
-    width: 260px;
-    background: #fff;
-    border: 1px solid #e5e5e5;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.13);
-    border-radius: 18px;
-    padding: 1.2rem 0 1rem 0;
-    z-index: 1000;
-    animation: dropdownSlide 0.22s cubic-bezier(0.4,0,0.2,1);
-  }
-  .nav-links.show li {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  .nav-links.show li a {
-    display: block;
-    width: 100%;
-    padding: 1rem 2rem;
-    color: #212121;
-    font-size: 1.14rem;
-    font-weight: 500;
-    background: transparent;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background 0.10s, color 0.10s;
-    border-radius: 6px;
-    text-align: left;
-  }
-  .nav-links.show li a:hover,
-  .nav-links.show li a:active {
-    background: #f3f4f6;
-    color: var(--accent);
-  }
-  .btn.cta {
-    display: none;
-  }
-  .nav-toggle {
-    display: block;
-    margin-left: 1rem;
-    z-index: 1100;
-  }
-}
-@keyframes dropdownSlide {
-  from {
-    opacity: 0;
-    transform: translateY(-12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-/* HERO */
-.hero {
-  background: var(--light-bg);
-  padding: 4rem 0;
-}
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-}
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: .5rem;
-}
-.hero-text p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-.btn.hero-btn {
-  background: var(--accent);
-  color: #fff;
-  padding: .8rem 1.6rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background .2s;
-  border: none;
-}
-.hero-image img {
-  width: 100%;
-  border-radius: 8px;
-}
-@media (max-width: 900px) {
-  .hero-grid { grid-template-columns: 1fr; text-align: center; }
-  .hero-image { display: none; }
-}
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-/* SECTIONS */
-.section { padding: 3rem 0; background: #fff; }
-.section.alt { background: var(--light-bg); }
-h2 {
-  text-align: center;
-  font-weight: 700;
-  font-size: 1.75rem;
-  margin-bottom: 1.5rem;
-}
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Business Exit Advisors</a>
+      <ul class="nav-links">
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#steps">5 Steps</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <!-- Mobile-only CTA button INSIDE dropdown -->
+        <li class="mobile-cta">
+          <a href="#contact" class="btn cta">Book a Call</a>
+        </li>
+      </ul>
+      <!-- Desktop-only CTA button OUTSIDE dropdown -->
+      <a href="#contact" class="btn cta desktop-cta">Book a Call</a>
+      <button class="nav-toggle" aria-label="Open mobile menu"><i class="fas fa-bars"></i></button>
+    </div>
+  </nav>
 
-/* TEAM */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 2rem;
-  text-align: center;
-}
-.team-member img {
-  width: 140px; height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 1rem;
-}
-.link {
-  color: var(--accent);
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: .5rem;
-}
-.link:hover {
-  text-decoration: underline;
-}
+  <!-- HERO -->
+  <header id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <h1>
+          Sell Your Business in 3 Months
+        </h1>
+        <p>
+          Fast-track your exit with our expert M&amp;A advisory
+        </p>
+        <a href="#contact" class="btn hero-btn">Free Exit Strategy Call</a>
+      </div>
+      <div class="hero-image">
+        <img src="hero.jpg" alt="M&A advisory illustration" />
+      </div>
+    </div>
+  </header>
 
-/* STATS */
-.stats-grid {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
-  text-align: center;
-}
-.stat strong {
-  display: block;
-  font-size: 2rem;
-  color: var(--accent);
-}
-.stat span {
-  font-size: .95rem;
-  color: #555;
-}
+  <main>
 
-/* Bubble/Cards for Struggles, Differentiators, Pricing, Why Us */
-.subheading {
-  text-align: center;
-  color: #555;
-  margin: .5rem 0 2rem;
-  font-size: 1rem;
-}
-.struggles-cards,
-.differentiators-cards,
-.pricing-cards,
-.why-cards {
-  display: grid;
-  gap: 1rem;
-}
-.struggles-cards,
-.differentiators-cards,
-.why-cards {
-  grid-template-columns: repeat(3,1fr);
-}
-.pricing-cards {
-  grid-template-columns: repeat(3,1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-@media (max-width: 900px) {
-  .struggles-cards,
-  .differentiators-cards,
-  .pricing-cards,
-  .why-cards {
-    grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
-  }
-}
-.card {
-  position: relative;
-  background: #fff;
-  border-radius: 12px;
-  padding: 1.5rem 2rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  transition: transform .2s, box-shadow .2s;
-}
-.card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-.card-icon {
-  width: 48px; height: 48px;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
-.card-icon i {
-  font-size: 1.3rem;
-}
-.card.popular .badge {
-  position: absolute;
-  top: -0.6rem; left: 50%;
-  transform: translateX(-50%);
-  background: var(--accent);
-  color: #fff;
-  padding: .3rem .8rem;
-  border-radius: 8px;
-  font-size: .75rem;
-  font-weight: 600;
-}
-.card h3 {
-  font-size: 1.25rem;
-  margin-bottom: .5rem;
-  color: var(--primary);
-}
-.card p {
-  font-size: .95rem;
-  line-height: 1.5;
-  color: #444;
-  flex-grow: 1;
-}
+    <!-- TEAM -->
+    <section id="team" class="section team">
+      <div class="container">
+        <h2>Meet Your Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <img src="Jang.jpeg" alt="Jahangir Khan" />
+            <h3>Jahangir Khan</h3>
+            <a href="https://www.linkedin.com/in/jahangirkhan/" target="_blank" class="link">
+              LinkedIn Profile
+            </a>
+            <p>Co-Founder &amp; Head of Buyer Sourcing</p>
+          </div>
+          <div class="team-member">
+            <img src="Kaya.jpeg" alt="Kaya Kesici" />
+            <h3>Kaya Kesici</h3>
+            <a href="https://www.linkedin.com/in/kayakesici/" target="_blank" class="link">
+              LinkedIn Profile
+            </a>
+            <p>Co-Founder &amp; Deal Structuring Lead</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* Pricing specifics */
-.plan-desc {
-  color: #555;
-  margin-bottom: 1rem;
-}
-.price {
-  margin: 1rem 0;
-}
-.price strong {
-  display: block;
-  font-size: 1.5rem;
-  color: var(--accent);
-}
-.price span {
-  font-size: .85rem;
-  color: #555;
-}
-.plan-features {
-  list-style: none;
-  padding-inline-start: 1rem;
-  margin-bottom: 1.5rem;
-  flex-grow: 1;
-}
-.plan-features li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: .5rem;
-}
-.plan-features li::before {
-  content: '\f0c8';
-  font-family: 'Font Awesome 5 Free';
-  font-weight: 900;
-  position: absolute;
-  left: 0; top: 0;
-  color: var(--accent);
-  font-size: .6rem;
-}
+    <!-- STATS -->
+    <section id="stats" class="section stats alt">
+      <div class="container">
+        <h2>By the Numbers</h2>
+        <div class="stats-grid">
+          <div class="stat">
+            <strong>400+</strong>
+            <span>Companies Advised</span>
+          </div>
+          <div class="stat">
+            <strong>£500M+</strong>
+            <span>Deal Value Negotiated</span>
+          </div>
+          <div class="stat">
+            <strong>95%</strong>
+            <span>Client Success Rate</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* WHY US (legacy list for backward compatibility) */
-.why-list {
-  max-width: 700px;
-  margin: 0 auto;
-  list-style: none;
-  display: grid;
-  gap: 1rem;
-}
-.why-list li {
-  display: flex;
-  align-items: center;
-}
-.why-list i {
-  color: var(--accent);
-  margin-right: .5rem;
-  font-size: 1.2rem;
-}
+    <!-- COMMON SELLING STRUGGLES -->
+    <section id="selling-struggles" class="section struggles">
+      <div class="container">
+        <h2>Common Selling Struggles</h2>
+        <p class="subheading">
+          We’ve helped dozens of owners tackle these blockers on their way to a smooth exit.
+        </p>
+        <div class="struggles-cards">
+          <div class="card">
+            <div class="card-icon">🧐</div>
+            <h3>Ambiguous Sale Objectives</h3>
+            <p>
+              Stop second-guessing why and when you want to exit. Our 4-MAT deep dive teases
+              out your true motivations, so every decision drives you toward your ideal outcome.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">👥</div>
+            <h3>Management Succession Uncertainty</h3>
+            <p>
+              Worried who’ll run things post-sale? We map your leadership team, spot gaps,
+              and build a transition plan that keeps your people—and your buyers—confident.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">📄</div>
+            <h3>Operational Documentation Gaps</h3>
+            <p>
+              Missing SOPs and training materials can grind due diligence to a halt. We’ll help
+              you codify processes, implement simple systems, and package everything buyers need.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">💰</div>
+            <h3>Financial Transparency Issues</h3>
+            <p>
+              Disorganized ledgers, WIP ambiguities or hidden arrears spook acquirers. We’ll clean
+              up your books, standardize reporting, and highlight the metrics that matter.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">🤝</div>
+            <h3>Customer &amp; Contract Concentration</h3>
+            <p>
+              Relying too heavily on a handful of clients—or murky framework agreements—puts
+              deals at risk. We identify concentration points and re-shape contracts for buyer comfort.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">⚖️</div>
+            <h3>Deal Structure Misalignment</h3>
+            <p>
+              Clashing price expectations, transition terms or stakeholder goals stall
+              negotiations. We align everyone around a clear valuation, structure and timeline for a win-win.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* 5 STEPS VERTICAL TIMELINE */
-.timeline-vertical {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3rem 0 1rem 0;
-  position: relative;
-  gap: 0.5rem;
-}
-.timeline-vline {
-  width: 3px;
-  height: 30px;
-  background: #e5e5e5;
-  border-radius: 3px;
-}
-.timeline-vertical .timeline-step {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-}
-.timeline-vertical .step-circle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: var(--accent);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.4rem;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.07);
-}
-.timeline-vertical .step-circle i {
-  font-size: 1.3rem;
-}
-.timeline-vertical .step-label {
-  font-size: 1rem;
-  color: var(--primary);
-  max-width: 280px;
-}
+    <!-- WHAT MAKES US DIFFERENT -->
+    <section id="differentiators" class="section differentiators alt">
+      <div class="container">
+        <h2>What Makes Us Different</h2>
+        <p class="subheading">
+          We don’t just broker exits—we transform the entire journey, aligning every step with your goals.
+        </p>
+        <div class="differentiators-cards">
+          <div class="card">
+            <h3>Exit-Ready Preparation Program</h3>
+            <p>
+              Not just a broker—we prepare your operations, finances &amp; legals so you hit the market
+              at peak value and with zero surprises.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Personal Wealth Transition Strategy</h3>
+            <p>
+              Beyond the business sale: bespoke planning for your finances, legacy &amp; life-after-exit,
+              so you step confidently into what’s next.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Confidential Buyer Network</h3>
+            <p>
+              Access to a hand-picked pool of vetted buyers &amp; investors—our discreet, private outreach
+              safeguards confidentiality and maximises deal quality.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Performance-Based Fee Structure</h3>
+            <p>
+              No hefty retainers—our incentives only kick in on successful deal completion,
+              so you know we’re 100% aligned with your outcome.
+            </p>
+          </div>
+          <div class="card">
+            <h3>SME &amp; Owner-Managed Expertise</h3>
+            <p>
+              We live and breathe the owner-led playbook—your unique challenges, emotional ties,
+              and decision dynamics are what we do best.
+            </p>
+          </div>
+          <div class="card">
+            <h3>Post-Sale Support &amp; Legacy</h3>
+            <p>
+              Our relationship doesn’t end at closing: we guide staff transitions, buyer
+              integration—and even offer founder mentoring if you choose.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* STEPS (legacy) */
-.steps-list {
-  counter-reset: step;
-  max-width: 600px;
-  margin: 0 auto;
-  list-style: none;
-}
-.steps-list li {
-  position: relative;
-  padding-left: 2.5rem;
-  margin-bottom: 1.25rem;
-}
-.steps-list li::before {
-  counter-increment: step;
-  content: counter(step);
-  position: absolute;
-  left: 0; top: 0;
-  width: 1.75rem; height: 1.75rem;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 1.75rem;
-  font-weight: 600;
-}
+    <!-- WHY US -->
+    <section id="why" class="section why">
+      <div class="container">
+        <h2>Why Work With Us</h2>
+        <p class="subheading">Our advantages for your business sale</p>
+        <div class="why-cards">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <h3>Data-Driven Deal Sourcing</h3>
+            <p>
+              We blend sector-specific intelligence with lean outreach to zero in on the highest-value prospects and eliminate time-wasters.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-user-shield"></i>
+            </div>
+            <h3>Owner-First, Confidential Process</h3>
+            <p>
+              Your goals and privacy come first — every step is designed to protect your business, your reputation, and your legacy.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-hand-holding-usd"></i>
+            </div>
+            <h3>Performance-Aligned Fees</h3>
+            <p>
+              No hidden retainers. Our incentives kick in only when you close, so we’re fully invested in maximizing your sale price.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-network-wired"></i>
+            </div>
+            <h3>Deep M&amp;A Expertise &amp; Network</h3>
+            <p>
+              Leverage two decades of dealmaking know-how and relationships across corporate finance, private equity, and strategic acquirers.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-flag-checkered"></i>
+            </div>
+            <h3>End-to-End Exit &amp; Transition Support</h3>
+            <p>
+              From financial cleanup and due-diligence prep through post-sale wealth planning, we’ve got you covered — long after the deal signs.
+            </p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3>Founder Mentoring &amp; Guidance</h3>
+            <p>
+              Receive ongoing support, mentorship, and access to our network to ensure your continued success beyond the transaction.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* TESTIMONIALS */
-.testimonial-slider {
-  position: relative;
-}
-.slides {
-  display: flex;
-  overflow: hidden;
-  scroll-behavior: auto;
-}
-.testimonial {
-  min-width: 100%;
-  padding: 2rem;
-  background: var(--light-bg);
-  text-align: center;
-}
-.testimonial p {
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  background: var(--accent);
-  border: none;
-  color: #fff;
-  padding: .4rem;
-  cursor: pointer;
-  transform: translateY(-50%);
-}
-.prev { left: 1rem; }
-.next { right: 1rem; }
+    <!-- 5 STEPS VERTICAL TIMELINE -->
+    <section id="steps" class="section steps alt">
+      <div class="container">
+        <h2>5 Steps to Selling Your Business</h2>
+        <div class="timeline-vertical">
+          <div class="timeline-step">
+            <div class="step-circle">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <div class="step-label">Initial strategy &amp; goal setting</div>
+          </div>
+          <div class="timeline-vline"></div>
+          <div class="timeline-step">
+            <div class="step-circle">
+              <i class="fas fa-balance-scale"></i>
+            </div>
+            <div class="step-label">Comprehensive valuation</div>
+          </div>
+          <div class="timeline-vline"></div>
+          <div class="timeline-step">
+            <div class="step-circle">
+              <i class="fas fa-users"></i>
+            </div>
+            <div class="step-label">Targeted buyer outreach</div>
+          </div>
+          <div class="timeline-vline"></div>
+          <div class="timeline-step">
+            <div class="step-circle">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div class="step-label">Negotiation &amp; deal structuring</div>
+          </div>
+          <div class="timeline-vline"></div>
+          <div class="timeline-step">
+            <div class="step-circle">
+              <i class="fas fa-flag-checkered"></i>
+            </div>
+            <div class="step-label">Closing &amp; transition planning</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* FAQ */
-.faq-item {
-  max-width: 700px;
-  margin: 1rem auto;
-}
-.faq-item h4 {
-  cursor: pointer;
-  position: relative;
-  padding-right: 1.5rem;
-}
-.faq-item h4::after {
-  content: '+';
-  position: absolute;
-  right: 0;
-}
-.faq-item.open h4::after {
-  content: '–';
-}
-.faq-item p {
-  display: none;
-  margin-top: .5rem;
-}
-.faq-item.open p {
-  display: block;
-}
+    <!-- TESTIMONIALS -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2>What Our Clients Say</h2>
+        <div class="testimonial-slider">
+          <button class="slider-btn prev">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <div class="slides">
+            <div class="testimonial">
+              <p>“They maximized our sale price and made it effortless.”</p>
+              <strong>— CEO, Tech Startup</strong>
+            </div>
+            <div class="testimonial">
+              <p>“Professional, transparent, and results-driven.”</p>
+              <strong>— Founder, Retail Chain</strong>
+            </div>
+            <div class="testimonial">
+              <p>“A flawless process from start to finish.”</p>
+              <strong>— Owner, Manufacturing Co.</strong>
+            </div>
+          </div>
+          <button class="slider-btn next">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+    </section>
 
-/* CONTACT */
-.contact-form {
-  max-width: 500px;
-  margin: 0 auto;
-  display: grid;
-  gap: 1rem;
-}
-.contact-form input,
-.contact-form textarea {
-  padding: .75rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-family: var(--font-sans);
-}
-.contact-form button {
-  background: var(--accent);
-  color: #fff;
-  padding: .75rem;
-  border: none;
-  border-radius: 4px;
-  font-weight: 600;
-  cursor: pointer;
-}
+    <!-- PRICING -->
+    <section id="pricing" class="section pricing alt">
+      <div class="container">
+        <h2>Pricing Plans</h2>
+        <div class="pricing-cards">
+          <div class="card">
+            <h3>DIY</h3>
+            <p class="plan-desc">Templates &amp; guides so you can source your own buyer</p>
+            <div class="price">
+              <strong>£4,997</strong>
+              <span>+ £997/mo for 12 mo</span>
+            </div>
+            <ul class="plan-features">
+              <li>Valuation framework</li>
+              <li>Outreach templates</li>
+              <li>DIY legal checklist</li>
+            </ul>
+            <a href="#contact" class="btn plan-btn">Select DIY</a>
+          </div>
+          <div class="card popular">
+            <div class="badge">Most Popular</div>
+            <h3>Assisted</h3>
+            <p class="plan-desc">We find &amp; vet buyers, negotiate, and keep you covered</p>
+            <div class="price">
+              <strong>£4,997</strong>
+              <span>+ £1,997/mo</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in DIY</li>
+              <li>Full buyer sourcing</li>
+              <li>Negotiation support</li>
+              <li>Access to legal panel</li>
+            </ul>
+            <a href="#contact" class="btn plan-btn">Select Assisted</a>
+          </div>
+          <div class="card">
+            <h3>Bespoke</h3>
+            <p class="plan-desc">All Assisted plus IM creation &amp; 1:1 coaching</p>
+            <div class="price">
+              <strong>£14,997</strong>
+              <span>+ £1,997/mo</span>
+            </div>
+            <ul class="plan-features">
+              <li>Everything in Assisted</li>
+              <li>Investment memorandum</li>
+              <li>Dedicated coaching</li>
+            </ul>
+            <a href="#contact" class="btn plan-btn">Select Bespoke</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-/* FOOTER */
-.footer {
-  background: var(--dark-bg);
-  color: #fff;
-  text-align: center;
-  padding: 2rem 0;
-}
-.footer a {
-  color: var(--accent);
-  text-decoration: none;
-}
+    <!-- FAQ -->
+    <section id="faq" class="section faq">
+      <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <h4>How soon can we start?</h4>
+          <p>We can begin strategy sessions within 48 hours.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Is there a success fee?</h4>
+          <p>No—upfront fees offset final deal fees.</p>
+        </div>
+        <div class="faq-item">
+          <h4>Do you handle cross-border deals?</h4>
+          <p>Yes—our network spans international buyers and counsel.</p>
+        </div>
+      </div>
+    </section>
 
-/* Utilities */
-@media (max-width: 600px) {
-  .container {
-    width: 97%;
-    padding-left: 0.2rem;
-    padding-right: 0.2rem;
-  }
-  .hero {
-    padding: 2.2rem 0;
-  }
-  .section { padding: 2rem 0; }
-  .card { padding: 1rem 1rem; }
-}
+    <!-- CONTACT -->
+    <section id="contact" class="section contact alt">
+      <div class="container">
+        <h2>Ready to Talk?</h2>
+        <form class="contact-form" action="contact.php" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" rows="5" placeholder="Tell us about your business"></textarea>
+          <button type="submit" class="btn hero-btn">Send Message</button>
+        </form>
+      </div>
+    </section>
 
-/* --- REDUCE GAP BETWEEN FAQ AND CONTACT --- */
-#faq.section {
-  padding-bottom: 1.2rem;
-}
-#contact.section {
-  padding-top: 1.2rem;
-}
-#faq .faq-item:last-child {
-  margin-bottom: 0;
-}
-#contact h2 {
-  margin-top: 0;
-}
+  </main>
 
-::-webkit-scrollbar {
-  width: 8px;
-  background: #f3f3f3;
-}
-::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 4px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: #b5b5b5;
-}
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © 2025 Business Exit Advisors |
+        <a href="#">Privacy Policy</a>
+      </p>
+    </div>
+  </footer>
 
-/* --- END OF FILE --- */
+  <!-- Main Script -->
+  <script>
+    // Mobile Navbar Toggle
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+
+      navToggle.addEventListener('click', function() {
+        navLinks.classList.toggle('show');
+        // Toggle hamburger/cross icon
+        this.innerHTML = navLinks.classList.contains('show') 
+          ? '<i class="fas fa-times"></i>' 
+          : '<i class="fas fa-bars"></i>';
+      });
+
+      navLinks.addEventListener('click', function(e) {
+        if(e.target.tagName === 'A') {
+          navLinks.classList.remove('show');
+          navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+      });
+
+      // Testimonial slider
+      const slides = document.querySelector('.slides');
+      const testimonials = document.querySelectorAll('.testimonial');
+      let idx = 0;
+      document.querySelector('.next').addEventListener('click', () => {
+        idx = (idx + 1) % testimonials.length;
+        slides.style.transform = `translateX(-${idx * 100}%)`;
+      });
+      document.querySelector('.prev').addEventListener('click', () => {
+        idx = (idx - 1 + testimonials.length) % testimonials.length;
+        slides.style.transform = `translateX(-${idx * 100}%)`;
+      });
+
+      // Linear scroll for in-page links
+      function linearScroll(targetSelector, duration) {
+        const target = document.querySelector(targetSelector);
+        if (!target) return;
+        const targetPos = target.getBoundingClientRect().top + window.pageYOffset;
+        const startPos = window.pageYOffset;
+        const distance = targetPos - startPos;
+        let startTime = null;
+
+        function animate(time) {
+          if (startTime === null) startTime = time;
+          const elapsed = time - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          window.scrollTo(0, startPos + distance * progress);
+          if (progress < 1) {
+            requestAnimationFrame(animate);
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+          const href = a.getAttribute('href');
+          if (href.length > 1) {
+            e.preventDefault();
+            linearScroll(href, 600);
+          }
+        });
+      });
+
+      // FAQ toggle
+      document.querySelectorAll('.faq-item h4').forEach(header => {
+        header.addEventListener('click', () => {
+          header.parentElement.classList.toggle('open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
