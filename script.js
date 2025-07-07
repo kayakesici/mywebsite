@@ -2,22 +2,12 @@
 document.querySelector('.nav-toggle').addEventListener('click', () => {
   document.querySelector('.nav-links').classList.toggle('show');
   document.querySelector('.btn.cta').classList.toggle('show');
-  // NEW: mobile nav toggle
-  document.getElementById('mobileNav').classList.toggle('show');
-});
-
-// NEW: mobile nav hide on link click
-document.querySelectorAll('#mobileNav a').forEach(link => {
-  link.addEventListener('click', () => {
-    document.getElementById('mobileNav').classList.remove('show');
-  });
 });
 
 // testimonial slider
 const slides = document.querySelector('.slides');
 const testimonials = document.querySelectorAll('.testimonial');
 let idx = 0;
-
 document.querySelector('.next').addEventListener('click', () => {
   idx = (idx + 1) % testimonials.length;
   slides.style.transform = `translateX(-${idx * 100}%)`;
@@ -45,16 +35,14 @@ function linearScroll(targetSelector, duration) {
       requestAnimationFrame(animate);
     }
   }
-
   requestAnimationFrame(animate);
 }
-
 document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const href = a.getAttribute('href');
     if (href.length > 1) {
       e.preventDefault();
-      linearScroll(href, 600); // 600ms duration, linear animation
+      linearScroll(href, 600);
     }
   });
 });
@@ -66,12 +54,13 @@ document.querySelectorAll('.faq-item h4').forEach(header => {
   });
 });
 
-// back-to-top button
+// back-to-top button (optional)
 const backBtn = document.getElementById('backToTop');
-window.addEventListener('scroll', () => {
-  backBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
-});
-backBtn.addEventListener('click', () => {
-  // Changed to use linear scroll for consistency
-  linearScroll('body', 600);
-});
+if (backBtn) {
+  window.addEventListener('scroll', () => {
+    backBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+  });
+  backBtn.addEventListener('click', () => {
+    linearScroll('body', 600);
+  });
+}
