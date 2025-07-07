@@ -4,6 +4,14 @@ document.querySelector('.nav-toggle').addEventListener('click', () => {
   document.querySelector('.btn.cta').classList.toggle('show');
 });
 
+// Optional: close menu on link click (for good UX)
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('show');
+    document.querySelector('.btn.cta').classList.remove('show');
+  });
+});
+
 // testimonial slider
 const slides = document.querySelector('.slides');
 const testimonials = document.querySelectorAll('.testimonial');
