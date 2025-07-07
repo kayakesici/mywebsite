@@ -5,7 +5,6 @@
   --dark-bg: #222;
   --font-sans: 'Public Sans', sans-serif;
 }
-
 /* RESET & BASE */
 *,
 *::before,
@@ -24,7 +23,6 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
-
 /* NAVBAR */
 .navbar {
   position: sticky;
