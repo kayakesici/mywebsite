@@ -77,7 +77,7 @@ body {
   cursor: pointer;
 }
 
-/* --- MOBILE MENU FIX --- */
+/* --- MOBILE MENU FIX (IMPROVED) --- */
 @media (max-width: 900px) {
   .nav-links,
   .btn.cta {
@@ -88,27 +88,33 @@ body {
     flex-direction: column;
     position: fixed;
     left: 0;
-    top: 56px; /* Adjust to match navbar height */
+    top: 0;
     width: 100vw;
     background: #fff;
     box-shadow: 0 6px 24px rgba(0,0,0,0.10);
-    border-bottom: 1px solid #e5e5e5;
-    padding: 1.5rem 0 0.5rem 0;
+    padding: 80px 0 1rem 0; /* space for navbar, then links */
     gap: 1.5rem;
     z-index: 1000;
+    border-bottom: 1px solid #e5e5e5;
     animation: dropdownSlide 0.3s cubic-bezier(0.4,0,0.2,1);
+  }
+  .nav-links.show li {
+    text-align: center;
+    width: 100%;
   }
   .btn.cta.show {
     display: block;
     width: 90vw;
-    margin: 1rem auto 0 auto;
+    margin: 0.5rem auto 0 auto;
     position: static;
     text-align: center;
     z-index: 1001;
+    font-size: 1.2rem;
   }
   .nav-toggle {
     display: block;
     margin-left: 1rem;
+    z-index: 1100;
   }
 }
 /* Dropdown animation */
