@@ -17,6 +17,7 @@ body {
   font-family: var(--font-sans);
   color: var(--primary);
   line-height: 1.6;
+  background: #fff;
 }
 .container {
   width: 90%;
@@ -54,6 +55,8 @@ body {
   font-weight: 600;
   color: var(--primary);
   transition: color .2s;
+  display: block;
+  padding: 0.5rem 0;
 }
 .nav-links a:hover {
   color: var(--accent);
@@ -67,6 +70,8 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: background .2s;
+  border: none;
+  cursor: pointer;
 }
 .nav-toggle {
   display: none;
@@ -88,7 +93,7 @@ body {
     flex-direction: column;
     align-items: stretch;
     position: absolute;
-    top: 60px; /* adjust to match your navbar height */
+    top: 60px; /* adjust if your navbar height is different */
     right: 1rem;
     width: 260px;
     background: #fff;
@@ -191,6 +196,7 @@ body {
   text-decoration: none;
   font-weight: 600;
   transition: background .2s;
+  border: none;
 }
 .hero-image img {
   width: 100%;
@@ -251,9 +257,7 @@ h2 {
   color: #555;
 }
 
-/* ---------------------------------------------- */
-/* Bubble cards (Selling Struggles, Differentiators, Pricing, Why Us) */
-/* ---------------------------------------------- */
+/* Bubble/Cards for Struggles, Differentiators, Pricing, Why Us */
 .subheading {
   text-align: center;
   color: #555;
@@ -372,7 +376,7 @@ h2 {
   font-size: .6rem;
 }
 
-/* WHY US (legacy list for backward compatibility, not used now) */
+/* WHY US (legacy list for backward compatibility) */
 .why-list {
   max-width: 700px;
   margin: 0 auto;
@@ -390,7 +394,7 @@ h2 {
   font-size: 1.2rem;
 }
 
-/* VERTICAL TIMELINE FOR 5 STEPS */
+/* 5 STEPS VERTICAL TIMELINE */
 .timeline-vertical {
   display: flex;
   flex-direction: column;
@@ -465,7 +469,7 @@ h2 {
 .slides {
   display: flex;
   overflow: hidden;
-  scroll-behavior: auto; /* Was: smooth; Now: instant jump */
+  scroll-behavior: auto;
 }
 .testimonial {
   min-width: 100%;
@@ -550,4 +554,30 @@ h2 {
 .footer a {
   color: var(--accent);
   text-decoration: none;
+}
+
+/* Utilities */
+@media (max-width: 600px) {
+  .container {
+    width: 97%;
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+  }
+  .hero {
+    padding: 2.2rem 0;
+  }
+  .section { padding: 2rem 0; }
+  .card { padding: 1rem 1rem; }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #f3f3f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b5b5b5;
 }
