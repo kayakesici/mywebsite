@@ -6,9 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -17,12 +15,14 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
   <!-- NAVBAR -->
-  <nav class="navbar">
+  <nav class="navbar" aria-label="Main navigation">
     <div class="container nav-container">
-      <a href="#" class="logo">Business Exit Advisors</a>
-      <ul class="nav-links">
+      <a href="#" class="logo" aria-label="Business Exit Advisors Home">Business Exit Advisors</a>
+      <button class="nav-toggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="navDrawer">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="nav-links" id="navDrawer">
         <li><a href="#why">Why Us</a></li>
         <li><a href="#steps">5 Steps</a></li>
         <li><a href="#pricing">Pricing</a></li>
@@ -32,20 +32,20 @@
         </li>
       </ul>
       <a href="#contact" class="btn cta desktop-cta">Book a Call</a>
-      <button class="nav-toggle" aria-label="Open mobile menu"><i class="fas fa-bars"></i></button>
     </div>
   </nav>
 
   <!-- HERO -->
   <header id="hero" class="hero">
+    <div class="hero-bg-svg"></div>
     <div class="container hero-grid">
       <div class="hero-text">
-        <h1>Sell Your Business in 3 Months</h1>
+        <h1><span class="highlight">Sell Your Business</span> in <span class="accent">3 Months</span></h1>
         <p>Fast-track your exit with our expert M&amp;A advisory</p>
         <a href="#contact" class="btn hero-btn">Free Exit Strategy Call</a>
       </div>
       <div class="hero-image">
-        <img src="https://placehold.co/500x400/e0eafc/0055A4?text=M%26A+Advisory" alt="M&A advisory illustration">
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=500&h=400&q=80" alt="M&A advisory illustration" loading="lazy">
       </div>
     </div>
   </header>
@@ -57,15 +57,15 @@
         <h2>Meet Your Team</h2>
         <div class="team-grid">
           <div class="team-member">
-            <img src="Jang.jpg" alt="Jahangir Khan">
+            <img src="Jang.jpg" alt="Jahangir Khan" loading="lazy">
             <h3>Jahangir Khan</h3>
-            <a href="https://www.linkedin.com/in/jahangirkhan/" target="_blank" class="link">LinkedIn Profile</a>
+            <a href="https://www.linkedin.com/in/jahangirkhan/" target="_blank" class="link" rel="noopener">LinkedIn Profile</a>
             <p>Co-Founder &amp; Head of Buyer Sourcing</p>
           </div>
           <div class="team-member">
-            <img src="Kaya.jpg" alt="Kaya Kesici">
+            <img src="Kaya.jpg" alt="Kaya Kesici" loading="lazy">
             <h3>Kaya Kesici</h3>
-            <a href="https://www.linkedin.com/in/kayakesici/" target="_blank" class="link">LinkedIn Profile</a>
+            <a href="https://www.linkedin.com/in/kayakesici/" target="_blank" class="link" rel="noopener">LinkedIn Profile</a>
             <p>Co-Founder &amp; Deal Structuring Lead</p>
           </div>
         </div>
@@ -93,52 +93,34 @@
         </p>
         <div class="struggles-cards">
           <div class="card">
-            <div class="card-icon">🧐</div>
+            <div class="card-icon"><i class="fas fa-question-circle"></i></div>
             <h3>Ambiguous Sale Objectives</h3>
-            <p>
-              Stop second-guessing why and when you want to exit. Our 4-MAT deep dive teases
-              out your true motivations, so every decision drives you toward your ideal outcome.
-            </p>
+            <p>Stop second-guessing why and when you want to exit. Our 4-MAT deep dive teases out your true motivations, so every decision drives you toward your ideal outcome.</p>
           </div>
           <div class="card">
-            <div class="card-icon">👥</div>
+            <div class="card-icon"><i class="fas fa-users-cog"></i></div>
             <h3>Management Succession Uncertainty</h3>
-            <p>
-              Worried who’ll run things post-sale? We map your leadership team, spot gaps,
-              and build a transition plan that keeps your people—and your buyers—confident.
-            </p>
+            <p>Worried who’ll run things post-sale? We map your leadership team, spot gaps, and build a transition plan that keeps your people—and your buyers—confident.</p>
           </div>
           <div class="card">
-            <div class="card-icon">📄</div>
+            <div class="card-icon"><i class="fas fa-file-alt"></i></div>
             <h3>Operational Documentation Gaps</h3>
-            <p>
-              Missing SOPs and training materials can grind due diligence to a halt. We’ll help
-              you codify processes, implement simple systems, and package everything buyers need.
-            </p>
+            <p>Missing SOPs and training materials can grind due diligence to a halt. We’ll help you codify processes, implement simple systems, and package everything buyers need.</p>
           </div>
           <div class="card">
-            <div class="card-icon">💰</div>
+            <div class="card-icon"><i class="fas fa-coins"></i></div>
             <h3>Financial Transparency Issues</h3>
-            <p>
-              Disorganized ledgers, WIP ambiguities or hidden arrears spook acquirers. We’ll clean
-              up your books, standardize reporting, and highlight the metrics that matter.
-            </p>
+            <p>Disorganized ledgers, WIP ambiguities or hidden arrears spook acquirers. We’ll clean up your books, standardize reporting, and highlight the metrics that matter.</p>
           </div>
           <div class="card">
-            <div class="card-icon">🤝</div>
+            <div class="card-icon"><i class="fas fa-handshake"></i></div>
             <h3>Customer &amp; Contract Concentration</h3>
-            <p>
-              Relying too heavily on a handful of clients—or murky framework agreements—puts
-              deals at risk. We identify concentration points and re-shape contracts for buyer comfort.
-            </p>
+            <p>Relying too heavily on a handful of clients—or murky framework agreements—puts deals at risk. We identify concentration points and re-shape contracts for buyer comfort.</p>
           </div>
           <div class="card">
-            <div class="card-icon">⚖️</div>
+            <div class="card-icon"><i class="fas fa-balance-scale"></i></div>
             <h3>Deal Structure Misalignment</h3>
-            <p>
-              Clashing price expectations, transition terms or stakeholder goals stall
-              negotiations. We align everyone around a clear valuation, structure and timeline for a win-win.
-            </p>
+            <p>Clashing price expectations, transition terms or stakeholder goals stall negotiations. We align everyone around a clear valuation, structure and timeline for a win-win.</p>
           </div>
         </div>
       </div>
@@ -153,46 +135,34 @@
         </p>
         <div class="differentiators-cards">
           <div class="card">
+            <div class="card-icon"><i class="fas fa-rocket"></i></div>
             <h3>Exit-Ready Preparation Program</h3>
-            <p>
-              Not just a broker—we prepare your operations, finances &amp; legals so you hit the market
-              at peak value and with zero surprises.
-            </p>
+            <p>Not just a broker—we prepare your operations, finances &amp; legals so you hit the market at peak value and with zero surprises.</p>
           </div>
           <div class="card">
+            <div class="card-icon"><i class="fas fa-piggy-bank"></i></div>
             <h3>Personal Wealth Transition Strategy</h3>
-            <p>
-              Beyond the business sale: bespoke planning for your finances, legacy &amp; life-after-exit,
-              so you step confidently into what’s next.
-            </p>
+            <p>Beyond the business sale: bespoke planning for your finances, legacy &amp; life-after-exit, so you step confidently into what’s next.</p>
           </div>
           <div class="card">
+            <div class="card-icon"><i class="fas fa-user-secret"></i></div>
             <h3>Confidential Buyer Network</h3>
-            <p>
-              Access to a hand-picked pool of vetted buyers &amp; investors—our discreet, private outreach
-              safeguards confidentiality and maximises deal quality.
-            </p>
+            <p>Access to a hand-picked pool of vetted buyers &amp; investors—our discreet, private outreach safeguards confidentiality and maximises deal quality.</p>
           </div>
           <div class="card">
+            <div class="card-icon"><i class="fas fa-percentage"></i></div>
             <h3>Performance-Based Fee Structure</h3>
-            <p>
-              No hefty retainers—our incentives only kick in on successful deal completion,
-              so you know we’re 100% aligned with your outcome.
-            </p>
+            <p>No hefty retainers—our incentives only kick in on successful deal completion, so you know we’re 100% aligned with your outcome.</p>
           </div>
           <div class="card">
+            <div class="card-icon"><i class="fas fa-briefcase"></i></div>
             <h3>SME &amp; Owner-Managed Expertise</h3>
-            <p>
-              We live and breathe the owner-led playbook—your unique challenges, emotional ties,
-              and decision dynamics are what we do best.
-            </p>
+            <p>We live and breathe the owner-led playbook—your unique challenges, emotional ties, and decision dynamics are what we do best.</p>
           </div>
           <div class="card">
+            <div class="card-icon"><i class="fas fa-hands-helping"></i></div>
             <h3>Post-Sale Support &amp; Legacy</h3>
-            <p>
-              Our relationship doesn’t end at closing: we guide staff transitions, buyer
-              integration—and even offer founder mentoring if you choose.
-            </p>
+            <p>Our relationship doesn’t end at closing: we guide staff transitions, buyer integration—and even offer founder mentoring if you choose.</p>
           </div>
         </div>
       </div>
@@ -275,9 +245,9 @@
     <section id="testimonials" class="section testimonials">
       <div class="container">
         <h2>What Our Clients Say</h2>
-        <div class="testimonial-slider">
-          <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
-          <div class="slides">
+        <div class="testimonial-slider" aria-label="Testimonials">
+          <button class="slider-btn prev" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
+          <div class="slides" tabindex="0">
             <div class="testimonial">
               <p>“They maximized our sale price and made it effortless.”</p>
               <strong>— CEO, Tech Startup</strong>
@@ -291,7 +261,8 @@
               <strong>— Owner, Manufacturing Co.</strong>
             </div>
           </div>
-          <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+          <button class="slider-btn next" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
+          <div class="slider-indicators" aria-hidden="true"></div>
         </div>
       </div>
     </section>
@@ -353,17 +324,19 @@
     <section id="faq" class="section faq">
       <div class="container">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-          <h4>How soon can we start?</h4>
-          <p>We can begin strategy sessions within 48 hours.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Is there a success fee?</h4>
-          <p>No—upfront fees offset final deal fees.</p>
-        </div>
-        <div class="faq-item">
-          <h4>Do you handle cross-border deals?</h4>
-          <p>Yes—our network spans international buyers and counsel.</p>
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <h4 tabindex="0" aria-expanded="false">How soon can we start?</h4>
+            <p>We can begin strategy sessions within 48 hours.</p>
+          </div>
+          <div class="faq-item" role="listitem">
+            <h4 tabindex="0" aria-expanded="false">Is there a success fee?</h4>
+            <p>No—upfront fees offset final deal fees.</p>
+          </div>
+          <div class="faq-item" role="listitem">
+            <h4 tabindex="0" aria-expanded="false">Do you handle cross-border deals?</h4>
+            <p>Yes—our network spans international buyers and counsel.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -372,9 +345,9 @@
     <section id="contact" class="section contact alt">
       <div class="container">
         <h2>Ready to Talk?</h2>
-        <form class="contact-form" action="contact.php" method="post">
-          <input type="text" name="name" placeholder="Your Name" required>
-          <input type="email" name="email" placeholder="Your Email" required>
+        <form class="contact-form" action="contact.php" method="post" autocomplete="on">
+          <input type="text" name="name" placeholder="Your Name" required autocomplete="name">
+          <input type="email" name="email" placeholder="Your Email" required autocomplete="email">
           <textarea name="message" rows="5" placeholder="Tell us about your business"></textarea>
           <button type="submit" class="btn hero-btn">Send Message</button>
         </form>
