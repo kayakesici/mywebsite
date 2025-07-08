@@ -4,21 +4,17 @@
   <meta charset="UTF-8">
   <title>Business Exit Advisors</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
-
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <!-- NAVBAR -->
-  <nav class="navbar" aria-label="Main navigation">
+  <nav class="navbar">
     <div class="container nav-container">
-      <a href="#" class="logo" aria-label="Business Exit Advisors Home">Business Exit Advisors</a>
+      <a href="#" class="logo">Business Exit Advisors</a>
       <button class="nav-toggle" aria-label="Open mobile menu" aria-expanded="false" aria-controls="navDrawer">
         <i class="fas fa-bars"></i>
       </button>
@@ -37,10 +33,9 @@
 
   <!-- HERO -->
   <header id="hero" class="hero">
-    <div class="hero-bg-svg"></div>
     <div class="container hero-grid">
       <div class="hero-text">
-        <h1><span class="highlight">Sell Your Business</span> in <span class="accent">3 Months</span></h1>
+        <h1>Sell Your Business in <span class="accent">3 Months</span></h1>
         <p>Fast-track your exit with our expert M&amp;A advisory</p>
         <a href="#contact" class="btn hero-btn">Free Exit Strategy Call</a>
       </div>
@@ -189,6 +184,7 @@
       <div class="container">
         <h2>What Our Clients Say</h2>
         <div class="testimonial-slider">
+          <button class="testimonial-arrow left" aria-label="Previous testimonial"><i class="fas fa-chevron-left"></i></button>
           <div class="testimonial-track">
             <div class="testimonial active">
               <blockquote>
@@ -217,12 +213,26 @@
                 <span>Owner, Walsh Consulting (£1.8M exit)</span>
               </cite>
             </div>
+            <div class="testimonial">
+              <blockquote>
+                "We were nervous about selling, but the team made the process clear and stress-free. Highly recommended."
+              </blockquote>
+              <cite>
+                <strong>David Patel</strong>
+                <span>Managing Director, BlueSky Media (£3.1M exit)</span>
+              </cite>
+            </div>
+            <div class="testimonial">
+              <blockquote>
+                "From valuation to closing, the communication was excellent and the results exceeded our expectations."
+              </blockquote>
+              <cite>
+                <strong>Linda Evans</strong>
+                <span>Owner, Evans Engineering (£4.2M exit)</span>
+              </cite>
+            </div>
           </div>
-          <div class="testimonial-indicators">
-            <button class="indicator active" aria-label="View testimonial 1"></button>
-            <button class="indicator" aria-label="View testimonial 2"></button>
-            <button class="indicator" aria-label="View testimonial 3"></button>
-          </div>
+          <button class="testimonial-arrow right" aria-label="Next testimonial"><i class="fas fa-chevron-right"></i></button>
         </div>
       </div>
     </section>
@@ -389,7 +399,6 @@
     </div>
   </footer>
 
-  <!-- JavaScript -->
   <script src="main.js"></script>
 </body>
 </html>
