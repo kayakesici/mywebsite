@@ -572,7 +572,7 @@ h2 {
 
 /* --- REDUCE GAP BETWEEN FAQ AND CONTACT --- */
 #faq.section {
-  padding-bottom: 0.2rem;
+  padding-bottom: 1.0rem;
 }
 #contact.section {
   padding-top: 1.0rem;
